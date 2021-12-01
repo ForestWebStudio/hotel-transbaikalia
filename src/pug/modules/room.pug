@@ -4,15 +4,15 @@
          <div class="swiper-wrapper">
             <div class="swiper-slide">
                img(src="img/room__slider.jpg" alt="alt")
-               div.flex 
+               div 
                   h1 Номер «ЛЮКС»
-                  div.flex__column 
+                  div
                      span люкс аппартамент
                      strong 5 500 Р
-                  div.flex__column 
+                  div 
                      span люкс
                      strong 6 500 Р
-                  a(href="#").button.flex__center-row
+                  a(href="#").button
                      |Забронировать
                      +icon('right__footer', 'right__footer fill')
             </div>
@@ -23,80 +23,155 @@
             +icon('room__svg-next', 'room__svg-width')
       </div>
    .container 
-      div.flex__spaceBetween 
+      .room__flex 
          div.margin
             h2 О номере
             p Просторные, светлые номера с балконом*. Гостиная, ванная комната, спальня. Номер оснащен всеми современными удобствами: большой комфортной кроватью, мягким уголком  кабельным телевидением, сейфом, холодильником. Номер удачно подойдет, как для работы, так и  для проведения различных мероприятий - романтическое свидание или проведение переговоров. В Вашем распоряжении: зона отдыха, гостиная, джакузи, душ. Панорамный вид на центральную улицу города Читы*.
             table
-               tr.flex 
+               tr
                   td Площадь номера:
                   th до 65 м2
-               tr.flex
+               tr
                   td Спальное место:
                   th двуспальная кровать King Size, диван
-               tr.flex
+               tr
                   td Ванная комната:
                   th душ, бидэ, джакузи или ванна
          div
             h2 В номере
-            div.grid
-               div.room__items.flex__center-column 
+            div.room__grid
+               div.room__items 
                   +icon('room__tele', 'room__svg-width1 fill__green')
                   span Кабельное TV
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__wi-fi', 'room__svg-width1 fill__green')
                   span Wi-Fi
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__cofe', 'room__svg-width1 fill__green')
                   span Чай, кофе, сахар, минеральная вода
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__utug', 'room__svg-width1 fill__green')
                   span Утюг и гладильная доска (по запросу)
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__fridge', 'room__svg-width1 fill__green')
                   span Холодильник
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__kyxny', 'room__svg-width1 fill__green')
                   span Кухонные принадлежности
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__fen', 'room__svg-width1 fill__green')
                   span Фен
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__tapok', 'room__svg-width1 fill__green')
                   span Халат, тапочки
-               div.room__items.flex__center-column 
+               div.room__items 
                   +icon('room__tualet', 'room__svg-width1 fill__green')
                   span Туалетные принадлежности
-      div.flex__center-justify.margin1
-         a(href="#").room__btn.button.flex__center-row
+      .room__flex-obertka.margin1
+         a(href="#").room__btn.button
             | Забронировать номер
             +icon('right__footer', 'right__footer')
       h2.border Другие номера
-      div.grid1.margin1
+      .room__grid1.margin1
          .room__blog
             img(src="img/room__items.jpg" alt="alt")
             .room__box-position
-              .room__border-top.flex__startSpaceBetween
+              .room__border-top
                  div.margin 
-                   strong Л ю к с
+                   strong Л ю к с 
                    span 5 700 ₽/ночь
-                 a(href="#").button1.flex__center-row Забронировать
+                 a(href="#").button1 Забронировать
          .room__blog
             img(src="img/room__items.jpg" alt="alt")
             .room__box-position
-              .room__border-top.flex__startSpaceBetween
+              .room__border-top
                  div.margin
                    strong О д н о м е с т н ы й
                    span 5 700 ₽/ночь
-                 a(href="#").button1.flex__center-row Забронировать
+                 a(href="#").button1 Забронировать
          .room__blog
             img(src="img/room__items2.jpg" alt="alt")
             .room__box-position
-              .room__border-top.flex__startSpaceBetween
+              .room__border-top
                  div.margin 
                    strong С е м е й н ы й
                    span 5 700 ₽/ночь
-                 a(href="#").button1.flex__center-row Забронировать
-
+                 a(href="#").button1 Забронировать
+   .container-fluid.margin1.room
+         .room__grid2 
+           a(href="#").room__items-action
+              img(src="img/room__blog.jpg", alt="alt")
+              .room__items-position
+                 +icon('room__blog', 'fill')
+                 span Ресторан
+           a(href="#").room__items-action
+              img(src="img/room__blog2.jpg", alt="alt")
+              .room__items-position
+                 +icon('room__icon2', 'fill')
+                 span Акватория
+           a(href="#").room__items-action
+              img(src="img/room___blog3.jpg", alt="alt")
+              .room__items-position 
+                 +icon('room__icon3', 'fill')
+                 span Прачечная
+   .container 
+      .news 
+        h3 Наши новости
+        <div class="news__swiper-container">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide">
+                span 23 сентября 2021
+                h4 Hospitality Awards 2021 — 
+                   | еще больше возможностей 
+                   | для отелей России!
+                p 16 августа стартует 8 проектный цикл Всероссийской премии. Подать заявку на участие в проекте может любой отель...
+                a(href="#")
+                  |Читать продолжение
+                  .news__icon.flex__center-row 
+                     +icon('news__arrow', 'fill news__width')
+             </div>
+             <div class="swiper-slide">
+                span 23 сентября 2021
+                h4 Как изменились цены на 
+                   | бронирование отелей в России 
+                   | на сентябрь?
+                p 16 августа стартует 8 проектный цикл Всероссийской премии. Подать заявку на участие в проекте может любой отель...
+                a(href="#") 
+                  |Читать продолжение
+                  .news__icon 
+                     +icon('news__arrow', 'fill news__width')
+             </div>
+             <div class="swiper-slide">
+                span 23 сентября 2021
+                h4 Hospitality Awards 2021 — 
+                   | еще больше возможностей 
+                   | для отелей России!
+                p 16 августа стартует 8 проектный цикл Всероссийской премии. Подать заявку на участие в проекте может любой отель...
+                a(href="#") 
+                  |Читать продолжение
+                  .news__icon
+                     +icon('news__arrow', 'fill news__width')
+             </div>
+             <div class="swiper-slide">
+                span 23 сентября 2021
+                h4 Hospitality Awards 2021 — 
+                   | еще больше возможностей 
+                   | для отелей России!
+                p 16 августа стартует 8 проектный цикл Всероссийской премии. Подать заявку на участие в проекте может любой отель...
+                a(href="#") 
+                  |Читать продолжение
+                  .news__icon 
+                     +icon('news__arrow', 'fill news__width')
+             </div>
+           </div>
+           .news__pagination       
+              <div class="news__swiper-button-prev">
+                  +icon('news__prev', 'news__width1')
+              </div>
+              <div class="news__swiper-pagination"></div>
+              <div class="news__swiper-button-next">
+                 +icon('news__next', 'news__width1')
+              </div>
+        </div>
 
 

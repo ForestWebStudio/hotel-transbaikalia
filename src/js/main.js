@@ -60,18 +60,72 @@ headerTabletBtn.addEventListener('click', () => {
 })
 
 
-//cards slider
+//room slider
 const room__swiper = new Swiper('.room__swiper-container', {
     // Optional parameters
     slidesPerView: 1,
     loop: true,
+    autoplay: {
+      delay: 3000,
+   },
     effect: 'fade',
     fadeEffect: {
-        crossFade: true
+      crossFade: true
     },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.room__swiper-button-next',
-        prevEl: '.room__swiper-button-prev',
-    }
-});
+      // Navigation arrows
+      navigation: {
+          nextEl: '.room__swiper-button-next',
+          prevEl: '.room__swiper-button-prev',
+        }
+  
+  });
+  
+  const body = document.querySelector('body')
+  
+  if(body.clientWidth <= 570) {
+      room__swiper.autoplay.start()
+  } else  {
+      room__swiper.autoplay.stop()
+  }
+  
+  
+  //news slider
+  const news__swiper = new Swiper('.news__swiper-container', {
+      // Optional parameters
+      slidesPerView: 3,
+      spaceBetween: 20,
+      slideToClickedSlide: true,
+    
+    
+      // If we need pagination
+      pagination: {
+        el: '.news__swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+  
+          // when window width is >= 320px
+          768: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+  
+           // when window width is >= 320px
+           1201: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+        },
+  
+        // Navigation arrows
+        navigation: {
+            nextEl: '.news__swiper-button-next',
+            prevEl: '.news__swiper-button-prev',
+          }
+    
+    });
