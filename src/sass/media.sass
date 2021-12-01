@@ -46,12 +46,38 @@
     .rest
         &__box
             flex-direction: column
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
         &__info
             order: 2
             max-width: 100%
         img
             transform: translateX(0)
             transform: translateY(-100px)
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
+
+    .business 
+        &__inner
+            padding-left: 120px
+            ul
+                padding-left: 0
+        &__box
+            flex-direction: column
+
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+
         &__list
             grid-template-columns: repeat(2, 1fr)
             li:last-child
@@ -217,6 +243,14 @@
         h2
             font-size: 40px
 
+    .rooms__item-reserve
+        height: 50px
+
+    .business
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+
 @media (max-width: 850px)
     .rest
         &__list
@@ -308,6 +342,13 @@
         &__info 
             margin-top: -90px
 
+    .business
+        &__list
+            li
+                height: 241px
+        &__info 
+            margin-top: -90px
+
 @media (max-width: 650px)
     .title
         h2
@@ -315,8 +356,19 @@
             line-height: 40px
         span
             font-size: 18px
-            line-height: 72px
+            line-height: 35px
     .rest
+        &__list
+            h4
+                font-size: 25px
+        &__info 
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+    .business
         &__list
             h4
                 font-size: 25px
