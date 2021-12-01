@@ -1,0 +1,241 @@
+.footer 
+   background: #2E2E2E
+   padding-top: 57px
+   position: relative
+
+   &__news-position 
+      width: calc(100vw - 500px)
+      padding: 20px 50px
+      position: absolute
+      top: -130px
+      left: 50%
+      transform: translate(-50%, 0%)
+      background: #FFFFFF
+      box-shadow: 0px 4px 94px rgba(0, 0, 0, 0.2)
+      border-radius: 5px
+      min-height: 160px 
+      z-index: 20
+      .footer__box  
+         flex: 0 0 auto
+         margin-right: 20px
+         a,
+         strong
+            color: #222222
+         p 
+            color: #2E2E2E
+
+      .footer__blog-icon
+         a 
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            width: 50px
+            height: 50px
+            background: #FFFFFF
+            border: 1px solid #2E2E2E
+            border-radius: 50%
+            transition: all 0.4s ease
+            svg 
+               transition: all 0.4s ease
+            &:not(:last-child)
+               margin-right: 15px
+            &:hover 
+               border-color: $hover
+            &:hover svg
+               fill: $hover
+      
+      .footer__btn
+         width: 320px
+         background: #2E2E2E
+         border-color: #2E2E2E
+         margin-top: 0px
+         &:hover 
+            background-color: #5C5C5C
+            border-color: #5C5C5C
+
+
+
+   &__flex-bottom 
+      margin-top: 71px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      min-height: 101px 
+      padding: 20px 0px
+      border-top: 1px solid #ffffff14
+
+      p 
+         font-family: 'PT Root UI', sans-serif
+         font-weight: normal
+         font-size: 14px
+         line-height: 34px
+         color: #FFFFFF
+         margin-right: 15px
+      
+   &__blog1 
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #8F8F8F
+      display: flex
+      align-items: center
+      margin-right: 15px
+   
+
+
+      a 
+        margin-left: 10px
+        width: 30px
+        height: 30px
+        border: 1px solid #ffffff1c
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all 0.4s ease
+        &:hover 
+           background-color: $hover
+           border-color: $hover
+
+
+   
+
+   &__flex 
+      display: flex
+
+   blockquote  
+      font-weight: normal
+      font-size: 30px
+      line-height: 32px
+      color: #087868
+      width: 272px
+      margin-top: 22px
+      font-family: "Liana"
+
+   h6 
+      font-weight: bold
+      font-size: 24px
+      line-height: 28px
+      text-align: center
+      color: #FFFFFF
+      margin-bottom: 22px
+      margin-top: 0px
+
+   ul:last-child 
+      margin-top: 19px
+
+   ul:not(:last-child) 
+      margin-right: 15px
+
+   &__items1 
+      width: 348px
+      padding: 20px 0px
+      padding-right: 15px
+
+
+   &__items-flex  
+      display: flex
+      width: 501px
+      justify-content: space-between
+   
+   &__items2 
+      width: 607px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      padding: 20px 0px
+      padding-left: 15px
+
+   span 
+      display: block
+      font-weight: 500
+      font-size: 13px
+      line-height: 16px
+      color: #8F8F8F
+      margin-bottom: 9px
+   
+   &__box a 
+      font-weight: 900
+      font-size: 24px
+      line-height: 29px
+      color: #FFFFFF
+      display: flex
+      align-items: center
+
+   &__box a svg 
+      margin-right: 10px
+
+   &__box p 
+      font-weight: 300
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+      margin-left: 27px
+
+   &__box strong 
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: #FFFFFF
+      display: flex
+      align-items: center
+
+   &__box strong svg 
+      margin-right: 7px
+
+   &__btn 
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 1px solid #087868
+      border-radius: 6px
+      max-width: 515px
+      width: 100%
+      min-height: 60px
+      font-weight: bold
+      font-size: 13px
+      line-height: 16px
+      letter-spacing: 0.07em
+      text-transform: uppercase
+      color: #FFFFFF
+      margin-top: 40px
+      transition: all 0.4s ease
+
+
+   &__btn:hover 
+      background-color: #1AA894
+
+
+
+   &__items.flex 
+      display: flex
+      padding: 20px 56px
+      border-right: 1px solid #ffffff14
+      border-left: 1px solid #ffffff14
+      width: 465px
+      justify-content: space-between
+
+
+   ul a 
+      font-weight: 300
+      font-size: 14px
+      line-height: 33px
+      color: #FFFFFF
+      padding-left: 31px
+      position: relative
+      transition: all 0.4s ease
+
+   ul a:hover 
+      color: #1AA894
+
+   ul a:before 
+      content: ''
+      position: absolute
+      top: 8px
+      left: 0px
+      width: 20px
+      border-bottom: 1px solid #087868
+
+
+
+

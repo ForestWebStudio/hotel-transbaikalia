@@ -1,0 +1,57 @@
+.main-footer 
+  .container 
+    .main-footer__content 
+      .main-footer__logo 
+        img(src="../../img/logo-white.svg", alt="Logo")
+        p.main-footer__logo-text
+          | Уют и комфорт — 
+          br
+          | вот главный наш девиз!
+      .main-footer__menu
+        p Меню
+        ul.main-footer__list 
+          li.main-footer__list-item 
+            a(href="#") Номера
+          li.main-footer__list-item 
+            a(href="#") Для бизнеса
+          li.main-footer__list-item 
+            a(href="#") Ресторан
+          li.main-footer__list-item 
+            a(href="#") Отзывы
+          li.main-footer__list-item 
+            a(href="#") Акватория
+          li.main-footer__list-item 
+            a(href="#") Контакты
+          li.main-footer__list-item 
+            a(href="#") О гостинице
+      .main-footer__room-reserv
+        .main-footer__contacts
+          .main-footer__phone 
+            span Телефон:
+            a(href="tel:+88007377799") 
+              +icon('phone__footer', 'phone__footer fill') 
+              | 8 800 737 77 99
+            p (круглосуточно)
+          .main-footer__address
+            span Адрес отеля:
+            strong
+              +icon('map__footer', 'phone__footer fill') 
+              | ул. Ленинградская, 36
+            p (круглосуточно)
+        .main-footer__reservation
+          a(href="#").footer__btn 
+            | Забронировать номер
+            +icon('right__footer', 'right__footer fill') 
+    .main-footer__socials
+      p.main-footer__roots © 2021 «Zabaikalie». Все права защищены.
+      p.main-footer__social Мы в социальных сетях:
+        a(href="#") 
+          +icon('vk__footer', 'footer__svg-width fill') 
+        a(href="#") 
+          +icon('instagram__footer', 'footer__svg-width fill') 
+        a(href="#") 
+          +icon('classmates__footer', 'footer__svg-width fill') 
+      p.main-footer__develop Разработка сайта —
+        a(href="#").flex 
+          +icon('forest__footer', 'forest__footer fill') 
+

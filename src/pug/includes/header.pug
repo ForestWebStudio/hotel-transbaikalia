@@ -1,0 +1,95 @@
+header.header
+    .header__tablet-btn
+        span
+    .container 
+        .header__wrapper
+            a.header__logo.logo(href="#")
+                img(src="img/logo.svg" alt="") 
+            a.header__phone-m(href="#")  
+                +icon('phone', 'icon-mod')
+            .header__menu-btn 
+                span
+                span 
+                span
+
+            .header__inner 
+                .header__top 
+                    a.header__phone(href="#") 
+                        +icon('phone', 'icon-mod')
+                        | 8 800 737 77 99 
+                    p 
+                        +icon('map', 'icon-mod')
+                        strong ул. Ленинградская, 36 
+                        span (круглосуточно)
+                    a.social__link(href="#") 
+                        +icon('instagram', 'icon-mod')
+                        | Instagram
+                    ul.header__lang-list.lang__list 
+                        li.lang__list-item.active
+                            a(href="#") Rus                    
+                        li.lang__list-item
+                            a(href="#") Eng
+                        li.lang__list-item
+                            a(href="#") Cni
+
+                .header__bottom 
+                    nav.header__menu.menu  
+                        ul.menu__list 
+                            li 
+                                a(href="#") Главная
+                            li
+                                a(href="#") Номера
+                                include navrooms-hover
+                            li 
+                                a(href="#") Ресторан
+                            li 
+                                a(href="#") Акватория
+                            li 
+                                a(href="#") О гостинице
+                            li 
+                                a(href="#") Для бизнеса
+                            li 
+                                a(href="#") Отзывы
+                            li 
+                                a(href="#") Контакты
+                    a.header__feedback(href="#") Забронировать
+    .tablet 
+        .container
+            .tablet__header
+                a.tablet__logo.logo(href="#") 
+                    img(src="img/logo-white.svg" alt="") 
+                a.tablet__phone(href="tel:+78007377799") 
+                    +icon('phone', 'mod-tablet')
+                    | 8 800 737 77 99
+                a.tablet__btn(href="#") 
+                    | Забронировать
+                    +icon('arrow', 'arrow-tablet')
+            .tablet__main 
+                ul.tablet__main-list 
+                    li 
+                        a(href="#") Главная
+                    li 
+                        a(href="#") Номера
+                    li 
+                        a(href="#") Ресторан
+                    li 
+                        a(href="#") Акватория
+                    li 
+                        a(href="#") О гостинице
+                    li 
+                        a(href="#") Для бизнеса
+                    li 
+                        a(href="#") Отзывы
+                    li 
+                        a(href="#") Контакты
+                ul.tablet__main-social 
+                    li Мы в социальных сетях:
+                    li 
+                        a(href="#") 
+                            +icon('vk', 'social')
+                    li 
+                        a(href="#") 
+                            +icon('insta', 'social')
+                    li 
+                        a(href="#") 
+                            +icon('ok', 'social')
