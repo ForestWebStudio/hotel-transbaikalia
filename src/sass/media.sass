@@ -3,6 +3,7 @@
         display: none
     .header::before
         display: none
+
 @media (max-width:1650px)
     .container-fluid.room 
        display: block
@@ -23,7 +24,7 @@
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 20px
-        a 
+        a
             padding: 22px 16px
         li + li
             margin-left: 0
@@ -51,7 +52,7 @@
         &__address
             strong
                 font-size: 14px
-            p 
+            p
                 font-size: 14px
 
 @media (max-width:1400px) 
@@ -79,51 +80,72 @@
        left: 20px
     .room__swiper-button-next
        right: 20px
+   
+    .rest
+        &__box
+            flex-direction: column
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+        img
+            transform: translateX(0)
+            transform: translateY(-100px)
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
+    .business 
+        &__inner
+            padding-left: 120px
+            ul
+                padding-left: 0
+        &__box
+            flex-direction: column
 
-    
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
 
-// @media (max-width:1200px)
-//     .container-fluid.contact
-//         padding: 0px
-//     .contact__blog-map
-//     .contacts__map
-//         height: 500px
-//     .contact > div
-//         flex-direction: column
-//     aside
-//         margin-right: 0px
-//         width: 100%
-//         margin-bottom: 20px
-//         padding: 0px 15px
-//     .footer__box
-//         margin-bottom: 0px
-//     .contact__blog-map
-//         width: 100%
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
-//     .footer
-//         padding-top: 308px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-right: 0px
-//         margin-bottom: 20px
-//     .footer__news-position .footer__btn
-//         width: 100%
-//         margin-top: 40px
-//     .footer__news-position
-//         flex-direction: column
-//     .footer__items-flex
-//         flex-direction: column
-//         width: 100%
-//     .footer__box:not(:last-child)
-//         margin-bottom: 20px
-//     .footer__btn
-//         width: 100%
-//     .footer ul
-//         flex: 0 0 auto
-//     .footer__items.flex
-//         width: 354px
-//         flex: 0 0 auto
+    .about
+        &__inner
+            padding-right: 120px
+            ul
+                padding-right: 0
+        &__box
+            flex-direction: column
+
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
 // standart
 @media (max-width: 1200px)
@@ -158,7 +180,7 @@
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 14px
         margin-right: 10px
-        a 
+        a
             padding: 22px 4px
         li
             text-align: center
@@ -298,54 +320,28 @@
             gap: 6px
         &__develop
             font-size: 12px
+    .rest
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
 
+    .rest
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
 
-    
-    // .footer__flex
-    //     flex-wrap: wrap
-    //     justify-content: space-between
-    // .footer__items2
-    //     width: 100%
-    // .footer__items.flex,
-    // .footer__items1,
-    // .footer__items2
-    //     padding: 0px
-    //     border: 0px
+    .title
+        h2
+            font-size: 40px
 
-    // .footer__items2
-    //     margin-top: 20px
+    .rooms__item-reserve
+        height: 50px
 
-// @media (max-width:900px)
-//     .footer__flex-bottom
-//         flex-direction: column
+    .business
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
 
-//     .footer__flex-bottom p,
-//     .footer__blog1
-//         margin-right: 0px
-//         margin-bottom: 10px
-//     .footer__blog2 p
-//         margin-bottom: 0px
-//         margin-right: 10px
-
-// @media (max-width: 767px)
-//     .footer__flex
-//         flex-direction: column
-//     .footer__items1
-//         width: 100%
-//         margin-bottom: 20px
-//         text-align: center
-
-//     .footer blockquote,
-//     .footer__items.flex
-//         width: 100%
-//         justify-content: space-around
-//     .footer__items-flex
-//         flex-direction: row
-//     .footer__box:not(:last-child)
-//         margin-bottom: 0px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-bottom: 20px
 
 @media (max-width: 570px)
    .room .margin1 
@@ -388,6 +384,20 @@
       padding-right: 20px
    .room__swiper-container .swiper-slide a
       width: 100%
+
+    .about
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+
+@media (max-width: 850px)
+    .rest
+        &__list
+            grid-template-columns: repeat(1, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 1
+
 
 // standart
 @media (max-width: 768px)
@@ -467,6 +477,67 @@
         &__develop
             font-size: 14px
 
+    .rest
+        &__list
+            li
+                height: 241px
+        &__info 
+            margin-top: -90px
+
+    .business
+        &__list
+            li
+                height: 241px
+        &__info 
+            margin-top: -90px
+
+    .about
+        &__list
+            li
+                height: 241px
+        &__info 
+            margin-top: -90px
+
+@media (max-width: 650px)
+    .title
+        h2
+            font-size: 36px
+            line-height: 40px
+        span
+            font-size: 18px
+            line-height: 35px
+    .rest
+        &__list
+            h4
+                font-size: 25px
+        &__info 
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+    .business
+        &__list
+            h4
+                font-size: 25px
+        &__info 
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+    .about
+        &__list
+            h4
+                font-size: 25px
+        &__info 
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
 
 @media (max-width: 425px)
     .main-footer
@@ -476,3 +547,9 @@
             display: none
         &__logo-text
             font-size: 30px
+
+    .rest
+        &__list
+            h4
+                font-size: 21px
+                line-height: 26px
