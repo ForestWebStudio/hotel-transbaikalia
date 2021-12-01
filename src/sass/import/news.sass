@@ -1,0 +1,90 @@
+.news 
+    h3 
+       text-align: center
+       margin-bottom: 37px
+    &__swiper-container
+       overflow: hidden
+       .swiper-slide
+          background: #EEF2F2
+          padding: 40px 50px 0px 50px
+          height: auto
+          display: flex
+          flex-direction: column
+          span
+             font-weight: normal
+             font-size: 12px
+             line-height: 42px
+             color: #087868
+          h4
+             max-width: 368px
+             margin-bottom: 17px
+          p
+             font-weight: 300
+             font-size: 16px
+             line-height: 24px
+             color: #8F8F8F
+             margin-bottom: 25px
+             flex-grow: 1
+          a
+             font-weight: bold
+             font-size: 12px
+             line-height: 15px
+             letter-spacing: 0.05em
+             text-transform: uppercase
+             color: #087868
+             padding: 30px 0px 40px
+             border-top: 1px solid #DFE6E6
+             display: flex
+             align-items: center
+    &__icon
+        width: 14px
+        height: 14px
+        margin-left: 6px
+        border-radius: 50%
+        background-color: #15685B
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+           margin-left: 2px
+           margin-top: -1px
+           width: 4.3px
+           height: 4.95px
+    &__pagination
+       margin-top: 60px
+       display: flex
+       justify-content: center
+    &__swiper-pagination.swiper-pagination-horizontal
+       margin: 0px 50px
+       width: auto
+       display: flex
+       align-items: center
+       .swiper-pagination-bullet
+           height: 18px
+           width: 2px
+           background: #2E2E2E
+           opacity: 0.2
+           margin: 0px
+           transition: all 0.4s ease
+           cursor: pointer
+           &:not(:last-child)
+              margin-right: 33px
+           &:hover
+              background: #1AA894
+              opacity: 1
+       .swiper-pagination-bullet.swiper-pagination-bullet-active
+          opacity: 1
+
+    &__swiper-button-prev,
+    &__swiper-button-next
+       cursor: pointer
+       width: 49px
+       height: 16px
+       display: flex
+       align-items: center
+       svg 
+         transition: all 0.4s ease
+         &:hover
+            fill: #1AA894
+ 
+
