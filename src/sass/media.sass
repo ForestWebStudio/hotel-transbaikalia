@@ -208,14 +208,22 @@
             padding-left: 30px
             padding-right: 30px
 
+    .rest
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+
+    .title
+        h2
+            font-size: 40px
+
 @media (max-width: 850px)
     .rest
-        &__list 
+        &__list
             grid-template-columns: repeat(1, 1fr)
             li:last-child
                 grid-column-start: 1
                 grid-column-end: 1
-            
 
 // standart
 @media (max-width: 768px)
@@ -293,6 +301,32 @@
         &__develop
             font-size: 14px
 
+    .rest
+        &__list
+            li
+                height: 241px
+        &__info 
+            margin-top: -90px
+
+@media (max-width: 650px)
+    .title
+        h2
+            font-size: 36px
+            line-height: 40px
+        span
+            font-size: 18px
+            line-height: 72px
+    .rest
+        &__list
+            h4
+                font-size: 25px
+        &__info 
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
 @media (max-width: 425px)
     .main-footer
         &__content
@@ -301,3 +335,9 @@
             display: none
         &__logo-text
             font-size: 30px
+
+    .rest
+        &__list
+            h4
+                font-size: 21px
+                line-height: 26px
