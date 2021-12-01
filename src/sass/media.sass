@@ -4,10 +4,6 @@
     .header::before
         display: none
 
-// @media (max-width:1650px)
-//     .footer__news-position
-//         width: calc(100vw - 100px)
-
 // standart
 @media (max-width:1500px)
     .container
@@ -16,7 +12,7 @@
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 20px
-        a 
+        a
             padding: 22px 16px
         li + li
             margin-left: 0
@@ -44,54 +40,25 @@
         &__address
             strong
                 font-size: 14px
-            p 
+            p
                 font-size: 14px
 
-// @media (max-width:1300px)
-// .footer__news-position
-//     width: calc(100vw - 15px)
-
-// @media (max-width:1200px)
-//     .container-fluid.contact
-//         padding: 0px
-//     .contact__blog-map
-//     .contacts__map
-//         height: 500px
-//     .contact > div
-//         flex-direction: column
-//     aside
-//         margin-right: 0px
-//         width: 100%
-//         margin-bottom: 20px
-//         padding: 0px 15px
-//     .footer__box
-//         margin-bottom: 0px
-//     .contact__blog-map
-//         width: 100%
-
-//     .footer
-//         padding-top: 308px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-right: 0px
-//         margin-bottom: 20px
-//     .footer__news-position .footer__btn
-//         width: 100%
-//         margin-top: 40px
-//     .footer__news-position
-//         flex-direction: column
-//     .footer__items-flex
-//         flex-direction: column
-//         width: 100%
-//     .footer__box:not(:last-child)
-//         margin-bottom: 20px
-//     .footer__btn
-//         width: 100%
-//     .footer ul
-//         flex: 0 0 auto
-//     .footer__items.flex
-//         width: 354px
-//         flex: 0 0 auto
+    .rest
+        &__box
+            flex-direction: column
+        &__info
+            order: 2
+            max-width: 100%
+        img
+            transform: translateX(0)
+            transform: translateY(-100px)
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
 // standart
 @media (max-width: 1200px)
@@ -102,7 +69,7 @@
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 14px
         margin-right: 10px
-        a 
+        a
             padding: 22px 4px
         li
             text-align: center
@@ -128,7 +95,6 @@
                 font-size: 12px
             a
                 font-size: 14px
-
 
 // standart
 @media (max-width: 991px)
@@ -223,76 +189,14 @@
         &__develop
             font-size: 12px
 
-
-    
-    // .footer__flex
-    //     flex-wrap: wrap
-    //     justify-content: space-between
-    // .footer__items2
-    //     width: 100%
-    // .footer__items.flex,
-    // .footer__items1,
-    // .footer__items2
-    //     padding: 0px
-    //     border: 0px
-
-    // .footer__items2
-    //     margin-top: 20px
-
-// @media (max-width:900px)
-//     .footer__flex-bottom
-//         flex-direction: column
-
-//     .footer__flex-bottom p,
-//     .footer__blog1
-//         margin-right: 0px
-//         margin-bottom: 10px
-//     .footer__blog2 p
-//         margin-bottom: 0px
-//         margin-right: 10px
-
-// @media (max-width: 767px)
-//     .footer__flex
-//         flex-direction: column
-//     .footer__items1
-//         width: 100%
-//         margin-bottom: 20px
-//         text-align: center
-
-//     .footer blockquote,
-//     .footer__items.flex
-//         width: 100%
-//         justify-content: space-around
-//     .footer__items-flex
-//         flex-direction: row
-//     .footer__box:not(:last-child)
-//         margin-bottom: 0px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-bottom: 20px
-
-// @media (max-width: 570px)
-//     .title h1
-//         font-size: 36px
-//         line-height: 29px
-//     .contact
-//     h1
-//         padding: 20px 0px
-//     & .footer__box
-//         padding: 20px 0px
-//     .footer__news-position .footer__btn
-//         margin-top: 30px
-//     .footer__news-position
-//         align-items: flex-start
-//         padding: 30px
-//     .footer__items.flex,
-//     .footer__items2
-//         display: none
-
-//     .footer
-//         padding-top: 373px
-//     .footer__flex-bottom
-//         margin-top: 42px
+@media (max-width: 850px)
+    .rest
+        &__list 
+            grid-template-columns: repeat(1, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 1
+            
 
 // standart
 @media (max-width: 768px)
@@ -363,7 +267,6 @@
             gap: 6px
         &__develop
             font-size: 14px
-
 
 @media (max-width: 425px)
     .main-footer
