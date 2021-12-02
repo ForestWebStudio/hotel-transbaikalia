@@ -160,7 +160,22 @@ const trustSwiper = new Swiper(".trust__items", {
     }
 });
 
+// hero slider
 
+const heroSwiper = new Swiper(".hero__items", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 4000,
+    },
+    navigation: {
+        nextEl: ".hero__btn-next",
+        prevEl: ".hero__btn-prev",
+    },
+});
 
 // Обрезка текста у новостей
 
