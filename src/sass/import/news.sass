@@ -11,6 +11,10 @@
     &__item
         padding: 40px 50px
         background-color: #EEF2F2
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
         time
             font-family: $inter
             font-weight: 400
@@ -58,8 +62,32 @@
                 color: #1AA894
                 &::after
                     background-color: #1AA894
+    &-pag
+        position: relative
+        top: 80px
+        max-width: 337px
+        margin: 0 auto
+
     &-btn
-        top: 50%
+        top: -19px
+
+.news-btn
+    width: 47px
+
+.news-btn__prev
+    background-image: url('../img/slider-prev.svg')
+    background-repeat: no-repeat
+    background-position: center
+    &::after
+        content: ''
+
+.news-btn__next
+    background-image: url('../img/slider-next.svg')
+    background-repeat: no-repeat
+    background-position: center
+    &::after
+        content: ''
+
 .news .news-pagination
     display: flex
     gap: 30px
@@ -75,5 +103,3 @@
             background-color: #1AA894
     span.swiper-pagination-bullet.swiper-pagination-bullet-active
         background-color: #2E2E2E
-    
-

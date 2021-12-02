@@ -97,12 +97,52 @@ const swiper = new Swiper(".news__items", {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
-        el: ".swiper-pagination",
+        el: ".news-pagination",
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".news-btn__next",
+        prevEl: ".news-btn__prev",
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0
+        },
+        // when window width is >= 767px
+        767: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 1499px
+        1499: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+    }
+});
+
+
+// Обрезка текста у новостей
+
+Ellipsis({
+    ellipsis: '…',
+    debounce: 300,
+    responsive: true,
+    className: '.news__item h4',
+    lines: 3,
+    portrait: null,
+    break_word: false
+});
+
+Ellipsis({
+    ellipsis: '…',
+    debounce: 300,
+    responsive: true,
+    className: '.news__item p',
+    lines: 5,
+    portrait: null,
+    break_word: false
 });
 
