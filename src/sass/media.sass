@@ -3,27 +3,28 @@
         display: none
     .header::before
         display: none
+
 @media (max-width:1650px)
-    .container-fluid.room 
-       display: block
+    .container-fluid.room
+        display: block
 
 // standart
 @media (max-width:1500px)
     .room__border-top
-       flex-direction: column
+        flex-direction: column
     .room__border-top div
-       margin-right: 0px
-       width: 100%
-       margin-bottom: 20px
+        margin-right: 0px
+        width: 100%
+        margin-bottom: 20px
     .room__border-top a
-       width: 100%
+        width: 100%
     .container
         max-width: 1200px
     .menu__list
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 20px
-        a 
+        a
             padding: 22px 16px
         li + li
             margin-left: 0
@@ -51,92 +52,113 @@
         &__address
             strong
                 font-size: 14px
-            p 
+            p
                 font-size: 14px
 
-@media (max-width:1400px) 
+@media (max-width:1400px)
     .room__grid2
-       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
-    .room__grid  
-       width: 563px
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+    .room__grid
+        width: 563px
     .room__swiper-container .swiper-slide > div
-       flex-direction: column
-       width: 100%
-       align-items: flex-start
-       bottom: auto
-       top: 50%
-       transform: translate(0%, -50%)
-       left: 71px
+        flex-direction: column
+        width: 100%
+        align-items: flex-start
+        bottom: auto
+        top: 50%
+        transform: translate(0%, -50%)
+        left: 71px
     .room__swiper-container .swiper-slide div > div
-       padding: 0px
-       border: none
-       width: 100%
-       margin-bottom: 10px
+        padding: 0px
+        border: none
+        width: 100%
+        margin-bottom: 10px
     .room h1
-       margin-bottom: 20px
-       margin-right: 0px
+        margin-bottom: 20px
+        margin-right: 0px
     .room__swiper-button-prev
-       left: 20px
+        left: 20px
     .room__swiper-button-next
-       right: 20px
+        right: 20px
 
+    .rest
+        &__box
+            flex-direction: column
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+        img
+            transform: translateX(0)
+            transform: translateY(-100px)
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
-    
+    .business
+        &__inner
+            padding-left: 120px
+            ul
+                padding-left: 0
+        &__box
+            flex-direction: column
 
-// @media (max-width:1200px)
-//     .container-fluid.contact
-//         padding: 0px
-//     .contact__blog-map
-//     .contacts__map
-//         height: 500px
-//     .contact > div
-//         flex-direction: column
-//     aside
-//         margin-right: 0px
-//         width: 100%
-//         margin-bottom: 20px
-//         padding: 0px 15px
-//     .footer__box
-//         margin-bottom: 0px
-//     .contact__blog-map
-//         width: 100%
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
 
-//     .footer
-//         padding-top: 308px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-right: 0px
-//         margin-bottom: 20px
-//     .footer__news-position .footer__btn
-//         width: 100%
-//         margin-top: 40px
-//     .footer__news-position
-//         flex-direction: column
-//     .footer__items-flex
-//         flex-direction: column
-//         width: 100%
-//     .footer__box:not(:last-child)
-//         margin-bottom: 20px
-//     .footer__btn
-//         width: 100%
-//     .footer ul
-//         flex: 0 0 auto
-//     .footer__items.flex
-//         width: 354px
-//         flex: 0 0 auto
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
+
+    .about
+        &__inner
+            padding-right: 120px
+            ul
+                padding-right: 0
+        &__box
+            flex-direction: column
+
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
 // standart
 @media (max-width: 1200px)
     .room__flex
         flex-direction: column
-    .room .room__flex > div 
+    .room .room__flex > div
         margin-right: 0px
-    .room .room__flex > div:not(:last-child) 
+    .room .room__flex > div:not(:last-child)
         margin-bottom: 30px
     .room p,
     .room__grid
         width: 100%
-    .contact > div 
+    .contact > div
         flex-direction: column
     .contact aside
         width: 100%
@@ -158,7 +180,7 @@
         grid-template-columns: repeat(4, 1fr)
         grid-column-gap: 14px
         margin-right: 10px
-        a 
+        a
             padding: 22px 4px
         li
             text-align: center
@@ -185,6 +207,7 @@
             a
                 font-size: 14px
 
+<<<<<<< HEAD
 @media (max-width:1024px) 
     .company 
        section
@@ -201,25 +224,27 @@
           margin-right: 0px
           margin-top: 20px
           padding-bottom: 20px
+=======
+@media (max-width:1024px)
+>>>>>>> 6d5a1b853c9e8afd95d1320df63e9534c76dff07
     .room__swiper-container .swiper-slide > img
-       width: 100%
-       height: 434px
-       object-fit: cover
+        width: 100%
+        height: 434px
+        object-fit: cover
     .room h1
-      width: 306px
-      font-size: 39px
-      line-height: 43px
-      text-align: left
+        width: 306px
+        font-size: 39px
+        line-height: 43px
+        text-align: left
     .room__svg-width
-       width: 30px
+        width: 30px
     .room__swiper-container .swiper-slide > div
-       padding: 0px
+        padding: 0px
     .room__swiper-container .swiper-slide span
-       font-size: 12px
+        font-size: 12px
     .room__swiper-container .swiper-slide strong
-       font-size: 35px
-       line-height: 50px
-
+        font-size: 35px
+        line-height: 50px
 
 // standart
 @media (max-width: 991px)
@@ -313,99 +338,46 @@
             gap: 6px
         &__develop
             font-size: 12px
+    .rest
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+
+    .rest
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+
+    .title
+        h2
+            font-size: 40px
+
+    .rooms__item-reserve
+        height: 50px
+
+    .business
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
+    .about
+        &__inner
+            padding-left: 30px
+            padding-right: 30px
 
 
-    
-    // .footer__flex
-    //     flex-wrap: wrap
-    //     justify-content: space-between
-    // .footer__items2
-    //     width: 100%
-    // .footer__items.flex,
-    // .footer__items1,
-    // .footer__items2
-    //     padding: 0px
-    //     border: 0px
 
-    // .footer__items2
-    //     margin-top: 20px
 
-// @media (max-width:900px)
-//     .footer__flex-bottom
-//         flex-direction: column
-
-//     .footer__flex-bottom p,
-//     .footer__blog1
-//         margin-right: 0px
-//         margin-bottom: 10px
-//     .footer__blog2 p
-//         margin-bottom: 0px
-//         margin-right: 10px
-
-// @media (max-width: 767px)
-//     .footer__flex
-//         flex-direction: column
-//     .footer__items1
-//         width: 100%
-//         margin-bottom: 20px
-//         text-align: center
-
-//     .footer blockquote,
-//     .footer__items.flex
-//         width: 100%
-//         justify-content: space-around
-//     .footer__items-flex
-//         flex-direction: row
-//     .footer__box:not(:last-child)
-//         margin-bottom: 0px
-//     .footer__news-position .footer__box,
-//     .footer__news-position .footer__box1
-//         margin-bottom: 20px
-
-@media (max-width: 570px)
-   .room .margin1 
-      margin-bottom: 70px
-   .news__swiper-container .swiper-slide 
-      padding: 20px 20px 0px 20px
-   .room__grid1,
-   .room__grid2
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr))
-   .title h2 
-      font-size: 37px
-      line-height: 52px
-
-   .room__swiper-container
-      margin-bottom: 50px
-   .room__blog img
-      height: 388px
-   .room__border-top
-      padding-top: 20px
-   .room__box-position
-      bottom: 25px
-   .room tr
-      flex-direction: column
-      align-items: flex-start
-   .room td
-      margin-right: 0px
-   .title h1
-      font-size: 36px
-      line-height: 29px
-   .room h1
-      width: 306px
-      font-size: 39px
-      line-height: 43px
-   .room__swiper-button-prev, 
-   .room__swiper-button-next
-      display: none
-   .room__swiper-container .swiper-slide > div
-      left: 0px
-      padding-left: 20px
-      padding-right: 20px
-   .room__swiper-container .swiper-slide a
-      width: 100%
+@media (max-width: 850px)
+    .rest
+        &__list
+            grid-template-columns: repeat(1, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 1
 
 // standart
 @media (max-width: 768px)
+<<<<<<< HEAD
     .company 
         h1
             margin: 30px 0px
@@ -431,11 +403,14 @@
             margin: 30px 0px
 
     .title h3 
+=======
+    .title h3
+>>>>>>> 6d5a1b853c9e8afd95d1320df63e9534c76dff07
         font-size: calc(38px + 44.2 * (100vw - 360px) / 1920)
-    .contact h1 
+    .contact h1
         padding: 20px 0px
         font-size: 50px
-    .contact .footer__btn 
+    .contact .footer__btn
         max-width: none
         width: 100%
     .header__menu-btn
@@ -506,6 +481,109 @@
         &__develop
             font-size: 14px
 
+    .rest
+        &__list
+            li
+                height: 241px
+        &__info
+            margin-top: -90px
+
+    .business
+        &__list
+            li
+                height: 241px
+        &__info
+            margin-top: -90px
+
+    .about
+        &__list
+            li
+                height: 241px
+        &__info
+            margin-top: -90px
+
+@media (max-width: 650px)
+    .title
+        h2
+            font-size: 36px
+            line-height: 40px
+        span
+            font-size: 18px
+            line-height: 35px
+    .rest
+        &__list
+            h4
+                font-size: 25px
+        &__info
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+    .business
+        &__list
+            h4
+                font-size: 25px
+        &__info
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+    .about
+        &__list
+            h4
+                font-size: 25px
+        &__info
+            a
+                display: none
+            p
+                font-size: 12px
+                line-height: 20px
+
+@media (max-width: 570px)
+    .room .margin1
+        margin-bottom: 70px
+    .news__swiper-container .swiper-slide
+        padding: 20px 20px 0px 20px
+    .room__grid1,
+    .room__grid2
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr))
+    .title h2
+        font-size: 37px
+        line-height: 52px
+
+    .room__swiper-container
+        margin-bottom: 50px
+    .room__blog img
+        height: 388px
+    .room__border-top
+        padding-top: 20px
+    .room__box-position
+        bottom: 25px
+    .room tr
+        flex-direction: column
+        align-items: flex-start
+    .room td
+        margin-right: 0px
+    .title h1
+        font-size: 36px
+        line-height: 29px
+    .room h1
+        width: 306px
+        font-size: 39px
+        line-height: 43px
+    .room__swiper-button-prev,
+    .room__swiper-button-next
+        display: none
+    .room__swiper-container .swiper-slide > div
+        left: 0px
+        padding-left: 20px
+        padding-right: 20px
+    .room__swiper-container .swiper-slide a
+        width: 100%
 
 @media (max-width: 425px)
     .main-footer
@@ -515,3 +593,9 @@
             display: none
         &__logo-text
             font-size: 30px
+
+    .rest
+        &__list
+            h4
+                font-size: 21px
+                line-height: 26px
