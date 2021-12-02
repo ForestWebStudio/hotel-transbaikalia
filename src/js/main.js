@@ -90,7 +90,7 @@ if (body.clientWidth <= 570) {
 
 
 //news slider
-const swiper = new Swiper(".news__items", {
+const newsSwiper = new Swiper(".news__items", {
     slidesPerView: 3,
     spaceBetween: 20,
     slidesPerGroup: 1,
@@ -122,6 +122,44 @@ const swiper = new Swiper(".news__items", {
         }
     }
 });
+
+// trust slider
+const trustSwiper = new Swiper(".trust__items", {
+    slidesPerView: 5,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".trust__pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".trust__btn-next",
+        prevEl: ".trust__btn-prev",
+    },
+    autoplay: {
+        delay: 2000,
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 0
+        },
+        // when window width is >= 767px
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        // when window width is >= 1499px
+        1499: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        }
+    }
+});
+
 
 
 // Обрезка текста у новостей
