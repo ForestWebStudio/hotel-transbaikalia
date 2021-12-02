@@ -13,10 +13,26 @@ langBtns.forEach(langBtn => {
 // mobaile menu btn
 const menuBtn = document.querySelector('.header__menu-btn');
 const menuList = document.querySelector('.header__inner');
+const main = document.querySelector('.main');
+const mainFooter = document.querySelector('.main-footer');
+const headerTabletBtn = document.querySelector('.header__tablet-btn');
+const tablet = document.querySelector('.tablet')
 
 menuBtn.addEventListener('click', () => {
     menuList.classList.toggle('active')
     menuBtn.classList.toggle('active')
+    main.classList.toggle('active');
+    mainFooter.classList.toggle('active');
+})
+
+// left menu btn
+
+
+headerTabletBtn.addEventListener('click', () => {
+    tablet.classList.toggle('active')
+    headerTabletBtn.classList.toggle('active')
+    main.classList.toggle('active');
+    mainFooter.classList.toggle('active');
 })
 
 
@@ -49,15 +65,6 @@ function init() {
 
 
 ymaps.ready(init);
-
-// left menu btn
-const headerTabletBtn = document.querySelector('.header__tablet-btn');
-const tablet = document.querySelector('.tablet')
-
-headerTabletBtn.addEventListener('click', () => {
-    tablet.classList.toggle('active')
-    headerTabletBtn.classList.toggle('active')
-})
 
 
 //room slider
@@ -199,3 +206,6 @@ Ellipsis({
     break_word: false
 });
 
+
+// анимация
+AOS.init();
