@@ -54,6 +54,19 @@
                 font-size: 14px
             p
                 font-size: 14px
+    .hero
+        height: 750px
+        &__items
+            transform: translateY(45%)
+        &__item
+            span
+                font-size: 55px
+                display: block
+                margin: 0 auto
+            strong
+                font-size: 80px
+                display: block
+                margin: 0 auto
 
 @media (max-width:1400px)
     .room__grid2
@@ -213,6 +226,29 @@
             justify-items: start
             grid-gap: 25px
 
+    .hero
+        height: 640px
+        &__items
+            transform: translateY(30%)
+        &__item
+            span
+                font-size: 45px
+                line-height: 50px
+            strong
+                font-size: 60px
+                line-height: 70px
+        &__user
+            width: 97%
+            bottom: -60px
+            form
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                grid-gap: 20px
+            label
+                width: 100%
+            button
+                width: 100%
+
 @media (max-width:1024px)
     .company
         section
@@ -260,6 +296,7 @@
         display: none
     .header
         border: none
+        padding-bottom: 20px
     .header__logo
         margin: 0
     .header__wrapper
@@ -368,6 +405,12 @@
         &__inner
             padding-left: 30px
             padding-right: 30px
+
+    .menu__list 
+        li
+            text-align: left
+        a 
+            padding: 0
 
 @media (max-width: 850px)
     .rest
@@ -510,10 +553,6 @@
             &-link
                 width: 100%
             
-
-
-        
-
 @media (max-width: 650px)
     .title
         h2
@@ -606,6 +645,25 @@
         margin-bottom: 30px
         img
             width: 70%
+
+    .hero
+        height: 400px
+        margin-bottom: 350px
+        &__items
+            transform: translateY(0)
+        &__item
+            span
+                font-size: 32px
+                line-height: 39px
+            strong
+                font-size: 42px
+                line-height: 42px
+        &__user
+            width: 97%
+            bottom: -255px
+            form
+                grid-template-columns: repeat(1, 1fr)
+                grid-gap: 20px
 
 @media (max-width: 425px)
     .main-footer
