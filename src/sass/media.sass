@@ -67,6 +67,74 @@
                 font-size: 80px
                 display: block
                 margin: 0 auto
+    .rest
+        &__inner
+            padding-right: 120px
+        &__box
+            flex-direction: column
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+        img
+            transform: translateX(0)
+            transform: translateY(-100px)
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            padding-right: 0
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
+
+    .business
+        &__inner
+            padding-left: 120px
+            ul
+                padding-left: 0
+        &__box
+            flex-direction: column
+
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
+
+    .about
+        &__inner
+            padding-right: 120px
+            ul
+                padding-right: 0
+        &__box
+            flex-direction: column
+
+            img
+                transform: translateX(0)
+                transform: translateY(-100px)
+        &__info
+            order: 2
+            max-width: 100%
+
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            li:last-child
+                grid-column-start: 1
+                grid-column-end: 3
+            img
+                transform: translateY(0)
 
 @media (max-width:1400px)
     .room__grid2
@@ -249,6 +317,9 @@
             button
                 width: 100%
 
+        .news
+            margin-bottom: 100px
+
 @media (max-width:1024px)
     .company
         section
@@ -309,6 +380,7 @@
         display: block
     .header__bottom
         margin-bottom: 40px
+        padding-top: 5px
     .header__top
         order: 2
         flex-direction: column
@@ -411,6 +483,9 @@
             text-align: left
         a 
             padding: 0
+
+    .news
+        margin-bottom: 80px
 
 @media (max-width: 850px)
     .rest

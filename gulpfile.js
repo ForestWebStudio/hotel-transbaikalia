@@ -112,6 +112,12 @@ const libs = () => {
         .pipe(browserSync.stream());
 }
 
+const favicon = () => {
+    return src(['./src/favicon/*.png', './src/favicon/*.xml', './src/favicon/*.ico', './src/favicon/*.json'])
+        .pipe(dest('./app/favicon'))
+        .pipe(browserSync.stream());
+}
+
 const watchFiles = () => {
     browserSync.init({
         server: {
@@ -170,8 +176,8 @@ const toProd = (done) => {
     done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, libs, fonts, resources, images, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, libs, fonts, resources, images, svgSprites, favicon, watchFiles);
 
-exports.build = series(toProd, htmlInclude, scripts, styles, libs, fonts, resources, images, svgSprites);
+exports.build = series(toProd, htmlInclude, scripts, styles, libs, fonts, resources, images, svgSprites, favicon);
 
 exports.cache = series(cache, rewrite);

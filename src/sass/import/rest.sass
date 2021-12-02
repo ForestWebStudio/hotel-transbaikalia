@@ -9,7 +9,7 @@
     &__inner
         background-color: #EEF2F2
         padding-left: 120px
-        padding-right: 120px
+        // padding-right: 120px
         padding-top: 70px
 
     &__box
@@ -18,7 +18,7 @@
         align-items: center
 
         img
-            transform: translateX(120px)
+            transform: translateX(70px)
     &__info
         max-width: 386px
         p
@@ -45,10 +45,14 @@
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 20px
         transform: translateY(60px)
+        padding-right: 120px
         li
             height: 340px
             position: relative
             overflow: hidden
+            &:hover
+                img
+                    transform: scale(1.2)
             
         img
             position: absolute
@@ -56,6 +60,7 @@
             height: 100%
             object-fit: cover
             z-index: 0
+            transition: .3s
         a
             display: flex
             justify-content: center
