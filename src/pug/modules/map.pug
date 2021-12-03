@@ -1,0 +1,34 @@
+.contacts
+    .container-width
+        .contacts__map#contacts__map
+    .container 
+        .contacts__info 
+            .contacts__info-items 
+                .contacts__info-item.contacts__info-item--mod 
+                    span Телефон:
+                    +icon('phone')
+                    p 
+                        strong 8 800 737 77 99
+                        | (круглосуточно)     
+                .contacts__info-item 
+                    span Адрес отеля:
+                    +icon('map')
+                    p 
+                        strong ул. Ленинградская, 36
+                        | (круглосуточно) 
+                .contacts__info-item.contacts__info-item--socials 
+                    span Мы в социальных сетях:
+                    ul 
+                        li 
+                            a(href="#") 
+                                +icon('vk', 'social')
+                        li 
+                            a(href="#") 
+                                +icon('insta', 'social')
+                        li 
+                            a(href="#") 
+                                +icon('ok', 'social')
+                a.contacts__info-link(href="#") 
+                    | Забронировать номер
+                    +icon('arrow-btn')
+

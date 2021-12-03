@@ -4,7 +4,7 @@
     padding-top: 20px
     border-bottom: 1px solid rgba(#000000, 0.1)
     position: relative
-    
+
     &::before
         content: ''
         position: absolute
@@ -50,10 +50,16 @@
 
 .header__tablet-btn.active
     span
-        background-color: #fff
+        background-color: transparent
         &::before,
         &::after
             background-color: #fff
+        &::before
+            transform: rotate(45deg)
+            top: 1px
+        &::after
+            transform: rotate(-45deg)
+            top: 0
 
 .header__logo
     display: block
@@ -132,28 +138,28 @@
 
 .menu__list
     box-sizing: border-box
-    & > li  
+    & > li
         display: inline-block
-        &:hover   
-            .navrooms-hover 
+        &:hover
+            .navrooms-hover
                 display: flex
                 height: auto
-                opacity: 1  
+                opacity: 1
 
-    a   
+    a
         display: inline-block
         font-family: $dejavu
         font-weight: 700
         font-size: 14px
         line-height: 16px
         transition: .3s
-        padding: 38px 16px 
+        padding: 38px 16px
         margin: 0
-        border-bottom: 2px solid transparent 
+        border-bottom: 2px solid transparent
         width: 100%
         &:hover
             color: #087868
-            border-color: #2E2E2E 
+            border-color: #2E2E2E
 
 .header__feedback
     font-weight: 700
@@ -168,6 +174,11 @@
     height: 42px
     border: 1px solid #087868
     border-radius: 3px
+    transition: .3s
+    &:hover
+        background-color:#1AA894
+        border: 1px solid #1AA894
+        color: #fff
 
 .tablet
     position: absolute
@@ -227,6 +238,9 @@
     line-height: 36px
     margin-left: auto
     margin-right: 48px
+    transition: .3s
+    &:hover
+        color: #2E2E2E
 
 .mod-tablet
     width: 24px
@@ -246,6 +260,11 @@
     display: flex
     justify-content: center
     align-items: center
+    transition: .3s
+    &:hover
+        background-color: #fff
+        border: 1px solid #fff
+        color: #2E2E2E
 
 .arrow-tablet
     width: 6px
@@ -318,6 +337,10 @@
         height: 50px
         border: 1px solid #FFFFFF
         border-radius: 100%
+        transition: .3s
+        &:hover
+            color: #2E2E2E
+            border: 1px solid #2E2E2E
 
 .icon-vk
     width: 27px
@@ -359,7 +382,6 @@
         &:last-child
             transform: rotate(45deg)
             bottom: 10.5px
-    
 
 .header__phone-m
     color: #2E2E2E
@@ -378,10 +400,10 @@
     flex-direction: column
     position: absolute
     width: 100%
-    height: 100vh
+    height: calc(100vh - 93px)
     background-color: #fff
     z-index: 90
-    top: 105px
+    top: 92px
     left: 0
     right: 0
     padding: 0 15px
