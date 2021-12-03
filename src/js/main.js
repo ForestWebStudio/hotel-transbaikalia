@@ -1,7 +1,3 @@
-$( "#datepicker" ).datepicker();
-$( "#datepicker1" ).datepicker();
-
-
 // lang btns
 const langBtns = document.querySelectorAll('.lang__list-item');
 
@@ -124,9 +120,10 @@ for (let i = 0; i < js__popupClick.length; i++) {
     const popup__name = js__popupClick[i].dataset.modal;
 
     const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
+    const calendar = document.querySelectorAll('.datepicker')
     const popupContent = popupCurent.querySelector('.js__popup-content');
     const popup__close = popupCurent.querySelector('.popup__close');
-
+    
 
     add(popupCurent, body);
 
@@ -153,6 +150,12 @@ for (let i = 0; i < js__popupClick.length; i++) {
       popupContent.addEventListener('click', (e) => {
         e.stopPropagation();
      })
+
+     for (let i = 0; i < calendar.length; i++) {
+      calendar[i].addEventListener('click', (e) => {
+        e.stopPropagation();
+      })
+     }
     }
 
     body.style.paddingRight = lockPaddingValue;
@@ -173,4 +176,109 @@ function remove(...js__popupRemove) {
     js__popupRemove[i].classList.remove('open');
   }
 }
+
+
+
+$(function() {
+  const js__label = document.querySelectorAll('.js__label');
+
+  
+  js__label.forEach(function (js__label) {
+    const input = js__label.querySelector('.calendar');
+    const popup__calendar = js__label.querySelector('.popup__calendar');
+    const js__calendarcheck = js__label.querySelector('.js__calendar-check');
+
+
+      js__label.addEventListener('click', () => {
+        js__label.classList.add('open')
+      })
+
+      document.addEventListener('click', function (e) {
+        if (!js__label.contains(e.target)) {
+          js__label.classList.remove('open')
+          if(input) {
+            input.classList.remove('active');
+          }
+          popup__calendar.style.display = 'block';
+          js__calendarcheck.style.display = 'none';
+        }
+      });
+   
+ 
+ 
+  
+
+
+
+  /*$.fn.datepicker.language['en'] =  {
+          days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+          daysShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+          daysMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+          months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+          monthsShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+          today: 'Today',
+          clear: 'Clear',
+          dateFormat: 'yyyy/dd/mm',
+          timeFormat: 'hh:ii',
+          firstDay: 0
+      };*/
+
+  $(input).datepicker({
+    // multipleDates: 2,
+    // multipleDatesSeparator: ' - ',
+    // minDate: new Date(),
+    language: 'ru',
+    // dateFormat: 'yyyy-mm-dd',
+    // firstDay: 0,
+    /*toggleSelected: false,
+    range: true,
+    timepicker: true,
+    minHours: 9,
+    maxHours: 17,
+    minutesStep: 5,*/
+    // view: 'months',
+    clearButton: false,
+    onSelect(formattedDate, date, inst) {
+      inst.hide();
+      if(inst._prevOnSelectValue) {
+          input.classList.add('active');
+          popup__calendar.style.display = 'none';
+          js__calendarcheck.style.display = 'block';
+      } 
+      // alert(date);
+    },
+    altField: $('#alt'),
+    altFieldDateFormat: 'yyyy-mm-dd',
+    position: 'bottom left'
+  });
+})
+
+
+
+/* 
+//количество гостей
+const js__click = document.querySelector('.js__click');
+const js__popuppeople = document.querySelector('.js__popup-people');
+const js__popuplus = document.querySelector('.js__popup-plus');
+const js__popupAppend = document.querySelector('.js__popup-append');
+const img = document.createElement('img');
+
+
+
+
+
+
+js__click.addEventListener('click', () => {
+  js__popuppeople.classList.toggle('open')
+})
+
+js__popuplus.addEventListener('click', () => {
+ 
+}) */
+
+
+
+});
+
+
 

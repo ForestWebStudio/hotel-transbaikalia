@@ -2,9 +2,29 @@
    .popup__body
       .popup__content.js__popup-content#date8
          span.popup__close
-            img(src="img/icons/popup__close.svg" alt="alt") 
-         <p>Date: <input type="text" id="datepicker"></p>
-         <p>Date: <input type="text" id="datepicker1"></p>
+            img(src="img/icons/popup__close.svg" alt="alt")  
+         label.js__label(for="calendar") 
+            |Дата заезда:
+            <input id="calendar" type="text"  name="date" class="calendar form-control" value="не выбрано">
+            +icon('popup__calendar', 'popup__calendar') 
+            +icon('popup__calendar-check', 'popup__calendar-check js__calendar-check') 
+         label.js__label(for="calendar1") 
+            |Дата выезда:
+            <input id="calendar1" type="text"  name="date" class="calendar form-control" value="не выбрано">
+            +icon('popup__calendar', 'popup__calendar') 
+            +icon('popup__calendar-check', 'popup__calendar-check js__calendar-check') 
+         label.js__label.js__click(for="calendar2") 
+            |Количество гостей:
+            <input id="calendar2" type="text"    value="не выбрано">
+            +icon('popup__calendar', 'popup__calendar') 
+            +icon('popup__calendar-check', 'popup__calendar-check js__calendar-check')
+            .js__popup-people
+               strong Взрослые: 2
+               .popup__blog-people 
+                 button.js__popup-minus -
+                 .popup__box-people.js__popup-append
+                  img
+                 button.js__popup-plus +
 
 
 

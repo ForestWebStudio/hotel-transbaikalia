@@ -10,6 +10,60 @@
   overflow: auto
   cursor: pointer
 
+  label 
+    display: block
+    width: 100%
+    padding: 11px 44px 11px 20px
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #9C9CA9
+    background: #EEF2F2
+    border-radius: 6px
+    position: relative
+    cursor: pointer
+    border-bottom: 2px solid rgba(143, 143, 143, 0.15)
+    margin-bottom: 20px
+    &:hover  svg
+      fill: #1AA894
+    &:hover  input
+      color: #1AA894
+    svg
+      position: absolute
+      top: 18px
+      right: 12px
+      transition: all 0.4s ease
+  label.open svg 
+    fill: #1AA894
+  label.open input 
+    color: #1AA894
+  label.open input.active
+    color: #087868
+  label.open input.active + svg 
+    fill: #087868
+
+
+  input
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    color: #2E2E2E
+    outline: 0px
+    display: block
+    border: none
+    width: 100%
+    margin-top: 6px
+    background: transparent
+    cursor: pointer
+    transition: all 0.4s ease
+ 
+
+
+  &__calendar-check 
+     display: none  
+
+
+
   &__body 
      min-height: 100%
      padding: 30px 15px
@@ -47,4 +101,17 @@ body.open
    overflow: hidden
   
 
-  
+.js__popup-people
+  width: 300px
+  height: 300px
+  background: green
+  display: none
+  position: absolute
+  top: 100px
+  left: 0px
+  display: block
+
+.js__popup-people.open 
+  display: block
+
+
