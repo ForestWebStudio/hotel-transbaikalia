@@ -1,0 +1,105 @@
+.hero
+    background-image: url('../img/hero-bg.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    height: 950px
+    position: relative
+    margin-bottom: 122px
+    &__items
+        transform: translateY(75%)
+        height: 300px
+        margin-top: auto
+        margin-bottom: auto
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        span
+            display: block
+            font-weight: 200
+            font-size: 72px
+            line-height: 87px
+            color: #2E2E2E
+            margin-bottom: 6px
+            text-align: center
+        strong
+            font-family: $dejavu
+            font-weight: 700
+            font-size: 96px
+            line-height: 95px
+            text-align: center
+
+    &__user
+        padding: 30px
+        background: #FFFFFF
+        box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
+        max-width: 1180px
+        width: 100%
+        margin: 0 auto
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        form
+            display: flex
+            justify-content: space-between
+            align-items: center
+        label
+            padding: 11px 20px 10px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            width: 265px
+            height: 60px
+            border-radius: 6px
+            background-color: #EEF2F2
+            cursor: pointer
+        input
+            display: none
+        span
+            font-weight: 500
+            font-size: 12px
+            line-height: 15px
+            color: #9C9CA9
+            margin-bottom: 5px
+        strong
+            font-weight: 700
+            font-size: 16px
+            line-height: 19px
+            color: #087868
+        button
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            letter-spacing: 0.07em
+            text-transform: uppercase
+            width: 265px
+            height: 60px
+            background-color: #2E2E2E
+            border-radius: 6px
+            color: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+        svg
+            width: 24px
+            height: 24px
+            margin-right: 8px
+
+.hero__btn-next.swiper-button-next,
+.hero__btn-prev.swiper-button-prev
+    background-color: transparent
+    color: #000 !important
+    fill: black !important
+    stroke: black !important
+    opacity: 0.3
+
+.room__swiper-button-prev
+    background-color: transparent
+    color: #000 !important
+    fill: black !important
+    stroke: black !important
+    opacity: 0.3
