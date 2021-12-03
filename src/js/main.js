@@ -1,3 +1,7 @@
+$( "#datepicker" ).datepicker();
+$( "#datepicker1" ).datepicker();
+
+
 // lang btns
 const langBtns = document.querySelectorAll('.lang__list-item');
 
@@ -105,4 +109,68 @@ const swiper = new Swiper(".news__items", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+
+//popup
+const js__popupClick = document.querySelectorAll('.popup__click');
+const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px'; //Получили ширину scrolla
+
+
+
+
+for (let i = 0; i < js__popupClick.length; i++) {
+  js__popupClick[i].addEventListener('click', (e) => {
+    e.stopPropagation();
+    const popup__name = js__popupClick[i].dataset.modal;
+
+    const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
+    const popupContent = popupCurent.querySelector('.js__popup-content');
+    const popup__close = popupCurent.querySelector('.popup__close');
+
+
+    add(popupCurent, body);
+
+    function popupRemove() {
+      remove(popupCurent);
+
+      setTimeout(() => {
+        remove(body);
+        body.style.paddingRight = '0px';
+      }, 400);
+    }
+
+
+    document.addEventListener('click', (e) => {
+      popupRemove();
+    });
+
+    popup__close.addEventListener('click', () => {
+      popupRemove();
+    });
+
+
+    if (popupContent) {
+      popupContent.addEventListener('click', (e) => {
+        e.stopPropagation();
+     })
+    }
+
+    body.style.paddingRight = lockPaddingValue;
+
+  })
+};
+
+
+
+function add(...js__popupAdd) {
+  for (let i = 0; i < js__popupAdd.length; i++) {
+    js__popupAdd[i].classList.add('open');
+  }
+}
+
+function remove(...js__popupRemove) {
+  for (let i = 0; i < js__popupRemove.length; i++) {
+    js__popupRemove[i].classList.remove('open');
+  }
+}
 
