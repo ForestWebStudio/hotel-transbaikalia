@@ -1,6 +1,3 @@
-$( "#datepicker" ).datepicker();
-$( "#datepicker1" ).datepicker();
-
 
 // lang btns
 const langBtns = document.querySelectorAll('.lang__list-item');
@@ -280,4 +277,3 @@ Ellipsis({
 
 // анимация
 AOS.init();
-
