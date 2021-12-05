@@ -1,0 +1,16 @@
+.booking
+    form(action="#") 
+        .booking__date
+            .booking__from.booking__input
+                label Дата заезда:
+                input(id="booking-from" type="text" placeholder="Не выбрано" class="datepicker-here")
+            .booking__to.booking__input
+                label Дата выезда:
+                input(id="booking-to" type="text" placeholder="Не выбрано")
+        .booking__quests.booking__input 
+            label Количество гостей:
+            input(type="text" placeholder="Не выбрано")
+            include ./quests.pug
+        button(type="submit") 
+            +icon('search')
+            | Найти номер

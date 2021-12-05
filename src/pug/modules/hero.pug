@@ -1,4 +1,6 @@
 section.hero(data-aos="fade-in")
+    .img__wrapper
+        img(src="img/hero-bg.png" alt="")
     .container 
         .hero__items.swiper  
             .hero__wrapper.swiper-wrapper 
@@ -16,22 +18,4 @@ section.hero(data-aos="fade-in")
                         strong и получите скидку 5%
             .hero__btn-prev.swiper-button-prev
             .hero__btn-next.swiper-button-next
-        .hero__user 
-            form(action="#")
-                label(for="") 
-                    span Дата заезда:
-                    input(type="date" name="")
-                    strong 25 сентября 2021
-                label(for="") 
-                    span Дата выезда:
-                    input(type="date" name="")
-                    strong не выбрано
-                label(for="") 
-                    span Количество гостей:
-                    input(type="date" name="")
-                    strong не выбрано
-                button 
-                    +icon('search')
-                    | Найти номер
-
-
+        include ./booking.pug

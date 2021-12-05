@@ -452,35 +452,41 @@ const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px'; //Полу
 
 
 for (let i = 0; i < js__popupClick.length; i++) {
-  js__popupClick[i].addEventListener('click', (e) => {
-    e.stopPropagation();
-    const popup__name = js__popupClick[i].dataset.modal;
+    js__popupClick[i].addEventListener('click', (e) => {
+        e.stopPropagation();
+        const popup__name = js__popupClick[i].dataset.modal;
+
 
     const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
     const calendar = document.querySelectorAll('.datepicker')
     const popupContent = popupCurent.querySelector('.js__popup-content');
     const popup__close = popupCurent.querySelector('.popup__close');
 
-
-    add(popupCurent, body);
-
-    function popupRemove() {
-      remove(popupCurent);
-
-      setTimeout(() => {
-        remove(body);
-        body.style.paddingRight = '0px';
-      }, 400);
-    }
+        const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
+        const popupContent = popupCurent.querySelector('.js__popup-content');
+        const popup__close = popupCurent.querySelector('.popup__close');
 
 
-    document.addEventListener('click', (e) => {
-      popupRemove();
-    });
+        add(popupCurent, body);
 
-    popup__close.addEventListener('click', () => {
-      popupRemove();
-    });
+        function popupRemove() {
+            remove(popupCurent);
+
+            setTimeout(() => {
+                remove(body);
+                body.style.paddingRight = '0px';
+            }, 400);
+        }
+
+
+        document.addEventListener('click', (e) => {
+            popupRemove();
+        });
+
+        popup__close.addEventListener('click', () => {
+            popupRemove();
+        });
+
 
 
     if (popupContent) {
@@ -495,23 +501,30 @@ for (let i = 0; i < js__popupClick.length; i++) {
       }
     }
 
-    body.style.paddingRight = lockPaddingValue;
+        if (popupContent) {
+            popupContent.addEventListener('click', (e) => {
+                e.stopPropagation();
+            })
+        }
 
-  })
+
+        body.style.paddingRight = lockPaddingValue;
+
+    })
 };
 
 
 
 function add(...js__popupAdd) {
-  for (let i = 0; i < js__popupAdd.length; i++) {
-    js__popupAdd[i].classList.add('open');
-  }
+    for (let i = 0; i < js__popupAdd.length; i++) {
+        js__popupAdd[i].classList.add('open');
+    }
 }
 
 function remove(...js__popupRemove) {
-  for (let i = 0; i < js__popupRemove.length; i++) {
-    js__popupRemove[i].classList.remove('open');
-  }
+    for (let i = 0; i < js__popupRemove.length; i++) {
+        js__popupRemove[i].classList.remove('open');
+    }
 }
 
 
@@ -639,3 +652,19 @@ Ellipsis({
 // анимация
 AOS.init();
 
+
+new AirDatepicker('#booking-from')
+new AirDatepicker('#booking-to')
+
+// niceselect
+
+$(document).ready(function () {
+    $('select').niceSelect();
+});
+
+const quests = document.querySelector('.booking__quests input')
+const questsModal = document.querySelector('.quests')
+
+quests.addEventListener('click', () => {
+    questsModal.classList.toggle('active')
+})
