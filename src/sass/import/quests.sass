@@ -1,0 +1,58 @@
+.quests
+    display: none
+    opacity: 0
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: -350px
+    z-index: 20
+    background-color: #fff
+    box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
+    border-radius: 6px
+    &__inner
+        padding: 30px
+        padding-top: 15px
+        padding-bottom: 15px
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        strong
+            margin-bottom: 10px
+        i
+            font-style: normal
+            margin-left: 5px
+        select
+            width: 100%
+        &-inner
+            display: grid
+            grid-template-columns: repeat(4, 47px)
+            grid-gap: 5px
+
+            input
+                font-weight: 500
+                font-size: 18px
+                line-height: 22px
+                color: #2E2E2E
+                background-color: #EEF2F2
+                border-radius: 6px
+                height: 50px
+                padding-left: 12px
+
+.quests.active
+    display: block
+    opacity: 1
+
+.quests__item + .quests__item
+    margin-top: 15px
+    padding-top: 15px
+    border-top: 1px solid rgba(#000, 0.1)
+
+.nice-select
+    width: 100%
+    font-size: 18px
+
+.nice-select.open .list
+    width: 100%
+
