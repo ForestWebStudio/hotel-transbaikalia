@@ -9,6 +9,281 @@
   z-index: 1000
   overflow: auto
   cursor: pointer
+  h6 
+    font-family: $dejavu
+    font-weight: bold
+    font-size: 36px
+    line-height: 42px
+    text-align: center
+    margin-bottom: 52px
+    width: 298px
+    margin-top: 0px
+    color: #2E2E2E
+    padding-bottom: 22px
+    position: relative  
+    &:after 
+      content: ''
+      width: 170px
+      position: absolute
+      bottom: 0px
+      left: 50%
+      transform: translate(-50%, 0%)
+      border-top: 2px solid #F1F1F1
+    &:before 
+      content: ''
+      width: 50px
+      position: absolute
+      bottom: 0px
+      left: 50%
+      transform: translate(-50%, 0%)
+      border-top: 2px solid #2E2E2E
+      z-index: 10
+
+  .mCS-dark.mCSB_scrollTools .mCSB_draggerRail 
+    background-color: transparent
+  .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+     background-color: #087868
+
+  &__selects-flex
+    display: flex
+    align-items: center
+  &__select
+    width:  24px
+    height: 34px
+    fill: #087868
+
+
+
+  /* select */
+  .select 
+    position: relative
+    
+
+  .select:not(:last-child) 
+    margin-right: 4px
+
+  
+  
+  .select__trigger 
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 15px
+    transition: 0.1s
+    color: #1f2937
+    width: 57px
+    height: 50px
+    background: #EEF2F2
+    border-radius: 6px
+    user-select: none
+    cursor: pointer
+    position: relative
+    padding: 13px 0px 13px 12px
+  
+  
+  .select__trigger span 
+    white-space: nowrap
+    overflow: hidden
+    width: auto
+    height: auto
+    margin-right: 1px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    color: #2E2E2E
+  
+  .select__arrow svg 
+    position: static
+  
+
+  
+  
+  .select__label--dark 
+    color: #4b5563
+    font-weight: 600
+  
+  
+  .select__label 
+    font-size: 14px
+    font-weight: 600
+    color: #9ca3af
+    position: absolute
+    top: -25px
+    left: 0
+    white-space: nowrap
+    
+  
+  
+  .select__drop 
+    display: none
+    width: 139%
+    padding: 10px 0
+    background-color: #fff
+    border: 1px solid #d1d5db
+    position: absolute
+    z-index: 10
+    top: 57px
+  
+  
+  .select__drop.open 
+    display: block
+  
+  .select__list 
+    max-height: 156px
+    font-size: 15px
+    color: #1f2937
+    overflow-y: auto
+  
+  
+  .select__list input 
+    display: none
+  
+  
+  .select__list label 
+    display: block
+    padding: 5px 16px
+    margin-bottom: 0
+    user-select: none
+    cursor: pointer
+    transition: 0.3s
+    background-color: transparent
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    color: #2E2E2E
+    text-align: center
+    border-bottom: 0px solid rgba(143, 143, 143, 0.15)
+  
+  
+  .select__list input:checked + label 
+    background-color: #3dbce1
+    color: #fff
+
+  &__select-classic
+    margin-bottom: 20px
+  &__btn-bottom
+    width: 100%
+
+  
+
+  &__select-classic  .select__trigger 
+    width: 100%
+    justify-content: start
+    justify-content: space-between
+    height: 60px
+    padding: 31px 44px 9px 20px
+    border-bottom: 2px solid rgba(143, 143, 143, 0.15)
+
+  &__select-classic .select__arrow 
+    position: absolute
+    top: 18px
+    right: 18px
+
+  &__arrow 
+    width: 24px
+    height: 24px
+    fill: #8F8F8F
+    transition: all 0.4s ease
+
+  &__select-classic  .select__trigger:hover &__arrow,
+  &__select-classic  .select__trigger.active &__arrow
+    fill:  #1AA894
+
+  &__select-classic  .select__trigger:hover span, 
+  &__select-classic  .select__trigger.active span 
+    color: #1AA894
+
+ 
+    
+  
+
+
+  &__select-classic .select__label 
+    top: 12px
+    left: 20px
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #9C9CA9
+
+
+
+
+  &__select-classic .select__trigger span 
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    color: #2E2E2E
+    transition: all 0.4s ease
+
+  &__select-classic .select__drop 
+    width: 100%
+    top: 70px
+
+  &__select-classic .select__list label 
+    text-align: left
+
+    
+
+
+  label,
+  &__quests 
+    display: block
+    width: 100%
+    padding: 11px 44px 11px 20px
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #9C9CA9
+    background: #EEF2F2
+    border-radius: 6px
+    position: relative
+    cursor: pointer
+    border-bottom: 2px solid rgba(143, 143, 143, 0.15)
+    margin-bottom: 20px
+    &:hover  svg
+      fill: #1AA894
+    &:hover  input
+      color: #1AA894
+    &:hover .popup__text 
+      color: #1AA894
+    svg
+      position: absolute
+      top: 18px
+      right: 12px
+      transition: all 0.4s ease
+  label.open svg 
+    fill: #1AA894
+  label.open input 
+    color: #1AA894
+  label.open input.active
+    color: #087868
+  label.open input.active + svg 
+    fill: #087868
+
+
+
+  input
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    color: #2E2E2E
+    outline: 0px
+    display: block
+    border: none
+    width: 100%
+    margin-top: 6px
+    background: transparent
+    cursor: pointer
+    transition: all 0.4s ease
+ 
+
+
+  &__calendar-check 
+     display: none  
+
+
 
   &__body 
      min-height: 100%
@@ -23,16 +298,80 @@
   &__content 
     background-color: rgb(255, 255, 255)
     cursor: default
-    padding: 37px 65px
+    padding: 59px 70px 70px 70px
     border: 1px solid #eff0f2
     border-radius: 5px
     position: relative
-  
+    top: -91px
   &__close 
     position: absolute
     top: 2px
     right: 8px
     cursor: pointer
+
+
+  &___close
+    position: absolute
+    width: 30px
+    height: 30px
+    top: 15px
+    right: 10px
+
+  &__people
+    background: #FFFFFF
+    box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
+    width: 100%
+    strong
+      font-weight: bold
+      font-size: 18px
+      line-height: 22px
+      text-align: center
+      color: #2E2E2E
+      margin-bottom: 12px
+      display: block
+    button
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background-color: #087868
+  &__blog-people
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 20px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    margin-bottom: 20px
+  svg.popup__minus
+    width: 24px
+    height: 24px
+    position: static
+    fill: #fff
+  &__box-people
+    img:not(:last-child) 
+      margin-right: 15px
+    img
+      width: 17px
+      height: 45px
+  &__text
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    color: #2E2E2E
+    display: flex
+    align-items: center
+    margin-top: 6px
+    transition: all 0.4s ease
+    div:first-child 
+      margin-right: 3px
+
+
+.js__click.open > svg 
+    fill: #1AA894
+.js__click.open .popup__text 
+    color: #1AA894
 
 .js__popup-open 
   opacity: 0
@@ -47,4 +386,23 @@ body.open
    overflow: hidden
   
 
-  
+.js__popup-people
+  position: absolute
+  top: 77px
+  left: 0px
+  transition: all 0.4s ease
+  opacity: 0
+  visibility: hidden
+  padding: 30px
+
+
+.js__popup-people.open 
+  opacity: 1
+  visibility: visible
+  z-index: 20
+
+.js__popup-userNone
+   display: none
+
+.js__popup-selectremove 
+  display: none
