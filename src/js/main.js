@@ -462,11 +462,7 @@ for (let i = 0; i < js__popupClick.length; i++) {
     const popupContent = popupCurent.querySelector('.js__popup-content');
     const popup__close = popupCurent.querySelector('.popup__close');
 
-        const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
-        const popupContent = popupCurent.querySelector('.js__popup-content');
-        const popup__close = popupCurent.querySelector('.popup__close');
-
-
+    
         add(popupCurent, body);
 
         function popupRemove() {
@@ -501,13 +497,7 @@ for (let i = 0; i < js__popupClick.length; i++) {
       }
     }
 
-        if (popupContent) {
-            popupContent.addEventListener('click', (e) => {
-                e.stopPropagation();
-            })
-        }
-
-
+      
         body.style.paddingRight = lockPaddingValue;
 
     })
