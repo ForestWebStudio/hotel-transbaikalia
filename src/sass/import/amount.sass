@@ -1,0 +1,89 @@
+.amount__items
+    position: absolute
+    width: 100%
+    background-color: #fff
+    box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
+    border-radius: 6px
+    bottom: -120px
+    left: 0
+    padding: 30px
+.amount__item
+    p
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 12px
+        font-weight: 700
+        font-size: 18px
+        line-height: 22px
+    span
+        font-weight: 700
+        font-size: 18px
+        line-height: 22px
+        color: #2E2E2E
+        margin-left: 5px
+
+.amount__radio
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    &-item
+        position: relative
+        display: flex
+        input
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            position: absolute
+        label
+            background-image: url('../img/disabled.svg')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            width: 18px
+            height: 48px
+            display: block
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/active.svg')
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                width: 18px
+                height: 48px
+                z-index: 2
+                opacity: 0
+        input:checked + label::before 
+            opacity: 1
+        label + label
+            margin-left: 15px
+
+.amount__btn
+    width: 30px
+    height: 30px
+    border-radius: 100%
+    background-color: #087868
+    cursor: pointer
+    position: relative
+    &::after,
+    &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+    &-prev
+        &::after
+            width: 14px
+            height: 2px
+    &-next
+        &::after
+            width: 14px
+            height: 2px
+        &::before
+            width: 2px
+            height: 14px

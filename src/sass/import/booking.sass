@@ -1,0 +1,143 @@
+.booking
+    position: absolute
+    bottom: 105px
+    left: 50%
+    transform: translateX(-50%)
+    max-width: 1180px
+    width: 100%
+    background-color: #fff
+    box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
+    form
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 30px
+    &__date
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-right: 20px
+    &__from
+        margin-right: 20px
+    &__quests
+        margin-right: 20px
+        position: relative
+    &__input
+        background-color: #EEF2F2
+        border-radius: 6px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 16px 0 20px
+        height: 60px
+        label
+            font-weight: 500
+            font-size: 12px
+            line-height: 15px
+            color: #9C9CA9
+            margin-bottom: 5px
+        input
+            font-weight: 700
+            font-size: 16px
+            line-height: 19px
+            color: #087868
+            padding: 0
+            margin: 0
+            border: none
+            outline: none
+            background-color: transparent
+            cursor: pointer
+            transition: .3s
+            position: relative
+            &:hover::placeholder
+                color: #087868
+            &::placeholder
+                font-weight: 700
+                font-size: 16px
+                line-height: 19px
+                color: #2E2E2E
+                transition: .3s
+    button
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.07em
+        color: #fff
+        width: 265px
+        padding: 18px 0
+        border-radius: 6px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #2E2E2E
+        border-radius: 6px
+        transition: .3s
+        &:hover
+            background-color: #5C5C5C
+
+        svg
+            width: 24px
+            height: 24px
+            margin-right: 8px
+
+.air-datepicker.-active-
+    transform: translateX(-15px)
+
+.air-datepicker--navigation
+    padding: 20px 20px 0 20px
+    margin-bottom: 20px
+
+.air-datepicker-nav
+    padding: 0
+    border-bottom: none
+
+.air-datepicker--content
+    padding: 0 20px 20px 20px
+    border-top: none
+
+.air-datepicker-body--day-names
+    margin: 0
+    padding-top: 7px
+    padding-bottom: 8px
+    border-top: 1px solid #F1F1F1
+    border-bottom: 1px solid #F1F1F1
+
+.air-datepicker-cell
+    font-weight: 700
+    font-size: 12px
+    line-height: 15px
+    color: #2E2E2E
+    &:hover
+        background-color: #1AA894
+        color: #fff
+
+.air-datepicker-cell.-selected-
+    background-color: #1AA894
+
+.air-datepicker-cell.-focus-
+    background-color: #1AA894
+    color: #fff
+
+.air-datepicker-cell.-current-
+    color: #1AA894
+
+.air-datepicker-nav--action
+    path
+        stroke: #087868
+
+.air-datepicker-nav--title
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    color: #2E2E2E
+    i
+        color: #2E2E2E
+
+.air-datepicker-body--day-name
+    font-weight: 500
+    font-size: 12px
+    line-height: 15px
+    color: #8F8F8F
+    text-transform: none
+
+@import './quests'

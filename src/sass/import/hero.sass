@@ -1,12 +1,15 @@
 .hero
-    background-image: url('../img/hero-bg.png')
-    background-repeat: no-repeat
-    background-position: center
-    // background-size: cover
-    background-attachment: fixed
-    height: 860px
+    height: 950px
     position: relative
-    margin-bottom: 122px
+    margin-bottom: 60px
+    img
+        position: absolute
+        object-position: center -100px
+        animation: bg 3s linear
+        object-fit: cover
+        transform: scale(1.1)
+        width: 100%
+        height: 100%
     &__items
         transform: translateY(75%)
         height: 300px
@@ -32,63 +35,12 @@
             line-height: 95px
             text-align: center
 
-    &__user
-        padding: 30px
-        background: #FFFFFF
-        box-shadow: 0px 4px 94px -20px rgba(0, 0, 0, 0.2)
-        max-width: 1180px
-        width: 100%
-        margin: 0 auto
-        position: absolute
-        bottom: 0
-        left: 50%
-        transform: translateX(-50%)
-        form
-            display: flex
-            justify-content: space-between
-            align-items: center
-        label
-            padding: 11px 20px 10px
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: flex-start
-            width: 265px
-            height: 60px
-            border-radius: 6px
-            background-color: #EEF2F2
-            cursor: pointer
-        input
-            display: none
-        span
-            font-weight: 500
-            font-size: 12px
-            line-height: 15px
-            color: #9C9CA9
-            margin-bottom: 5px
-        strong
-            font-weight: 700
-            font-size: 16px
-            line-height: 19px
-            color: #087868
-        button
-            font-weight: 700
-            font-size: 14px
-            line-height: 17px
-            letter-spacing: 0.07em
-            text-transform: uppercase
-            width: 265px
-            height: 60px
-            background-color: #2E2E2E
-            border-radius: 6px
-            color: #fff
-            display: flex
-            justify-content: center
-            align-items: center
-        svg
-            width: 24px
-            height: 24px
-            margin-right: 8px
+.img__wrapper
+    overflow: hidden
+    width: 100%
+    height: 100%
+    position: absolute
+
 
 .hero__btn-next.swiper-button-next,
 .hero__btn-prev.swiper-button-prev
@@ -104,3 +56,12 @@
     fill: black !important
     stroke: black !important
     opacity: 0.3
+
+@keyframes bg
+    from
+        transform: scale(1)
+    to
+        transform: scale(1.1)
+
+
+@import './booking'
