@@ -1,0 +1,27 @@
+.quests 
+    .quests__inner
+        .quests__item.quests__parrents
+            strong 
+                | Взрослые:
+                i 2
+            select#parents
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+        .quests__item.quests__kids
+            strong 
+                | Дети:
+                i 2
+            select#kids
+                option(value="1") 1
+                option(value="2") 2
+                option(value="3") 3
+                option(value="4") 4
+        .quests__item.quests__age 
+            strong Возраст детей
+            .quests__item-inner
+                input(type="number" name="age" value="1" min="1" max="18")
+                input(type="number" name="age" value="1" min="1" max="18")
+                input(type="number" name="age" value="1" min="1" max="18")
+                input(type="number" name="age" value="1" min="1" max="18")
