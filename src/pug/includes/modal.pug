@@ -1,6 +1,6 @@
 .popup.js__popup-open(data-popup="#popup")
    .popup__body
-      .popup__content.js__popup-content#date8
+      form(action="#").popup__content.js__popup-content#date8
          span.popup__close
             +icon('popup___close', 'popup___close')
          h6.title Забронировать номер
@@ -389,6 +389,10 @@
                </ul>
              </div>
          </div>
+          label.js__label(for="phone")
+            |Ваш телефон
+            input.phone__tell(type="text" placeholder="не выбрано")#phone
+            +icon('phone', 'phone') 
          button.popup__btn-bottom.button(type="submit") Забронировать номер
              +icon('right__footer', 'right__footer fill')
 

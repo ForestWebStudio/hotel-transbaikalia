@@ -1,16 +1,369 @@
 .booking
-    form(action="#") 
-        .booking__date
-            .booking__from.booking__input
-                label Дата заезда:
-                input(id="booking-from" type="text" placeholder="Не выбрано" class="datepicker-here")
-            .booking__to.booking__input
-                label Дата выезда:
-                input(id="booking-to" type="text" placeholder="Не выбрано")
-        .booking__quests.booking__input 
-            label Количество гостей:
-            input(type="text" placeholder="Не выбрано")
-            include ./quests.pug
-        button(type="submit") 
-            +icon('search')
+    form(action="#").popup 
+        label.js__label(for="booking__calendar") 
+            |Дата заезда:
+            <input id="booking__calendar" type="text"  name="date" class="calendar form-control" value="не выбрано">
+            +icon('popup__calendar', 'popup__calendar') 
+            +icon('popup__calendar-check', 'popup__calendar-check js__calendar-check') 
+        label.js__label(for="booking__calendar1") 
+            |Дата выезда:
+            <input id="booking__calendar1" type="text"  name="date" class="calendar form-control" value="не выбрано">
+            +icon('popup__calendar', 'popup__calendar') 
+            +icon('popup__calendar-check', 'popup__calendar-check js__calendar-check') 
+        .popup__quests.js__click
+            |Количество гостей:
+            div.popup__text.js__popup-color 
+             div.js__popupInputDate  не выбрано
+             div.js__popup__children 
+               
+            +icon('popup__user', 'popup__calendar js__popup-userblock') 
+            +icon('popup__user-follow-', 'popup__calendar js__popup-userNone') 
+            .popup__people.js__popup-people
+               strong.js__popup-number Взрослые: 2
+               .popup__blog-people 
+                 button.js__popup-minus 
+                    +icon('popup__minus', 'popup__minus')
+                 .popup__box-people.js__popup-append
+               
+                 
+
+
+                 button.js__popup-plus 
+                     +icon('popup__plus', 'popup__minus')
+               strong.js__popup-numberChildren Ребенок: 0
+               .popup__blog-people 
+                 button.js__popup-minusChildren 
+                    +icon('popup__minus', 'popup__minus')
+                 .popup__box-people.js__popup-appendChildren
+                 button.js__popup-plusChildren 
+                    +icon('popup__plus', 'popup__minus')
+               strong Возраст детей
+               .popup__selects-flex.js__popup-opendselect 
+               .js__popup-selectremove
+                 <div class="select js__popup-select">
+                     <div class="select__trigger">
+                       <span>1</span>
+                       <div class="select__arrow">
+                         +icon('popup__select', 'popup__select') 
+                       </div>
+                     </div>
+                     <div class="select__drop">
+                       <ul class="select__list select__scroll">
+                         <li>
+                           <input id="select_0" type="radio" name="select" />
+                           <label for="select_0">1</label>
+                         </li>
+                         <li>
+                           <input id="select_1" type="radio" name="select" />
+                           <label for="select_1">2</label>
+                         </li>
+                         <li>
+                           <input id="select_2" type="radio" name="select" />
+                           <label for="select_2">3</label>
+                         </li>
+                         <li>
+                           <input id="select_3" type="radio" name="select" />
+                           <label for="select_3">4</label>
+                         </li>
+                         <li>
+                           <input id="select_4" type="radio" name="select" />
+                           <label for="select_4">5</label>
+                         </li>
+                         <li>
+                           <input id="select_5" type="radio" name="select" />
+                           <label for="select_5">6</label>
+                         </li>
+                         <li>
+                           <input id="select_6" type="radio" name="select" />
+                           <label for="select_6">7</label>
+                         </li>
+                         <li>
+                           <input id="select_7" type="radio" name="select" />
+                           <label for="select_7">8</label>
+                         </li>
+                         <li>
+                           <input id="select_8" type="radio" name="select" />
+                           <label for="select_8">9</label>
+                         </li>
+                         <li>
+                           <input id="select_9" type="radio" name="select" />
+                           <label for="select_9">10</label>
+                         </li>
+                         <li>
+                           <input id="select_10" type="radio" name="select" />
+                           <label for="select_10">11</label>
+                         </li>
+                         <li>
+                           <input id="select_11" type="radio" name="select" />
+                           <label for="select_11">12</label>
+                         </li>
+                         <li>
+                           <input id="select_12" type="radio" name="select" />
+                           <label for="select_12">13</label>
+                         </li>
+                         <li>
+                           <input id="select_13" type="radio" name="select" />
+                           <label for="select_13">14</label>
+                         </li>
+                         <li>
+                           <input id="select_14" type="radio" name="select" />
+                           <label for="select_14">15</label>
+                         </li>
+                         <li>
+                           <input id="select_15" type="radio" name="select" />
+                           <label for="select_15">16</label>
+                         </li>
+                         <li>
+                           <input id="select_16" type="radio" name="select" />
+                           <label for="select_16">17</label>
+                         </li>
+                       </ul>
+                     </div>
+                 </div>
+                 <div class="select js__popup-select">
+                     <div class="select__trigger">
+                       <span>1</span>
+                       <div class="select__arrow">
+                         +icon('popup__select', 'popup__select') 
+                       </div>
+                     </div>
+                     <div class="select__drop">
+                       <ul class="select__list select__scroll">
+                         <li>
+                           <input id="select_0" type="radio" name="select" />
+                           <label for="select_0">1</label>
+                         </li>
+                         <li>
+                           <input id="select_1" type="radio" name="select" />
+                           <label for="select_1">2</label>
+                         </li>
+                         <li>
+                           <input id="select_2" type="radio" name="select" />
+                           <label for="select_2">3</label>
+                         </li>
+                         <li>
+                           <input id="select_3" type="radio" name="select" />
+                           <label for="select_3">4</label>
+                         </li>
+                         <li>
+                           <input id="select_4" type="radio" name="select" />
+                           <label for="select_4">5</label>
+                         </li>
+                         <li>
+                           <input id="select_5" type="radio" name="select" />
+                           <label for="select_5">6</label>
+                         </li>
+                         <li>
+                           <input id="select_6" type="radio" name="select" />
+                           <label for="select_6">7</label>
+                         </li>
+                         <li>
+                           <input id="select_7" type="radio" name="select" />
+                           <label for="select_7">8</label>
+                         </li>
+                         <li>
+                           <input id="select_8" type="radio" name="select" />
+                           <label for="select_8">9</label>
+                         </li>
+                         <li>
+                           <input id="select_9" type="radio" name="select" />
+                           <label for="select_9">10</label>
+                         </li>
+                         <li>
+                           <input id="select_10" type="radio" name="select" />
+                           <label for="select_10">11</label>
+                         </li>
+                         <li>
+                           <input id="select_11" type="radio" name="select" />
+                           <label for="select_11">12</label>
+                         </li>
+                         <li>
+                           <input id="select_12" type="radio" name="select" />
+                           <label for="select_12">13</label>
+                         </li>
+                         <li>
+                           <input id="select_13" type="radio" name="select" />
+                           <label for="select_13">14</label>
+                         </li>
+                         <li>
+                           <input id="select_14" type="radio" name="select" />
+                           <label for="select_14">15</label>
+                         </li>
+                         <li>
+                           <input id="select_15" type="radio" name="select" />
+                           <label for="select_15">16</label>
+                         </li>
+                         <li>
+                           <input id="select_16" type="radio" name="select" />
+                           <label for="select_16">17</label>
+                         </li>
+                       </ul>
+                     </div>
+                 </div>
+                 <div class="select js__popup-select">
+                     <div class="select__trigger">
+                       <span>1</span>
+                       <div class="select__arrow">
+                         +icon('popup__select', 'popup__select') 
+                       </div>
+                     </div>
+                     <div class="select__drop">
+                       <ul class="select__list select__scroll">
+                         <li>
+                           <input id="select_0" type="radio" name="select" />
+                           <label for="select_0">1</label>
+                         </li>
+                         <li>
+                           <input id="select_1" type="radio" name="select" />
+                           <label for="select_1">2</label>
+                         </li>
+                         <li>
+                           <input id="select_2" type="radio" name="select" />
+                           <label for="select_2">3</label>
+                         </li>
+                         <li>
+                           <input id="select_3" type="radio" name="select" />
+                           <label for="select_3">4</label>
+                         </li>
+                         <li>
+                           <input id="select_4" type="radio" name="select" />
+                           <label for="select_4">5</label>
+                         </li>
+                         <li>
+                           <input id="select_5" type="radio" name="select" />
+                           <label for="select_5">6</label>
+                         </li>
+                         <li>
+                           <input id="select_6" type="radio" name="select" />
+                           <label for="select_6">7</label>
+                         </li>
+                         <li>
+                           <input id="select_7" type="radio" name="select" />
+                           <label for="select_7">8</label>
+                         </li>
+                         <li>
+                           <input id="select_8" type="radio" name="select" />
+                           <label for="select_8">9</label>
+                         </li>
+                         <li>
+                           <input id="select_9" type="radio" name="select" />
+                           <label for="select_9">10</label>
+                         </li>
+                         <li>
+                           <input id="select_10" type="radio" name="select" />
+                           <label for="select_10">11</label>
+                         </li>
+                         <li>
+                           <input id="select_11" type="radio" name="select" />
+                           <label for="select_11">12</label>
+                         </li>
+                         <li>
+                           <input id="select_12" type="radio" name="select" />
+                           <label for="select_12">13</label>
+                         </li>
+                         <li>
+                           <input id="select_13" type="radio" name="select" />
+                           <label for="select_13">14</label>
+                         </li>
+                         <li>
+                           <input id="select_14" type="radio" name="select" />
+                           <label for="select_14">15</label>
+                         </li>
+                         <li>
+                           <input id="select_15" type="radio" name="select" />
+                           <label for="select_15">16</label>
+                         </li>
+                         <li>
+                           <input id="select_16" type="radio" name="select" />
+                           <label for="select_16">17</label>
+                         </li>
+                       </ul>
+                     </div>
+                 </div>
+                 <div class="select js__popup-select">
+                     <div class="select__trigger">
+                       <span>1</span>
+                       <div class="select__arrow">
+                         +icon('popup__select', 'popup__select') 
+                       </div>
+                     </div>
+                     <div class="select__drop">
+                       <ul class="select__list select__scroll">
+                         <li>
+                           <input id="select_0" type="radio" name="select" />
+                           <label for="select_0">1</label>
+                         </li>
+                         <li>
+                           <input id="select_1" type="radio" name="select" />
+                           <label for="select_1">2</label>
+                         </li>
+                         <li>
+                           <input id="select_2" type="radio" name="select" />
+                           <label for="select_2">3</label>
+                         </li>
+                         <li>
+                           <input id="select_3" type="radio" name="select" />
+                           <label for="select_3">4</label>
+                         </li>
+                         <li>
+                           <input id="select_4" type="radio" name="select" />
+                           <label for="select_4">5</label>
+                         </li>
+                         <li>
+                           <input id="select_5" type="radio" name="select" />
+                           <label for="select_5">6</label>
+                         </li>
+                         <li>
+                           <input id="select_6" type="radio" name="select" />
+                           <label for="select_6">7</label>
+                         </li>
+                         <li>
+                           <input id="select_7" type="radio" name="select" />
+                           <label for="select_7">8</label>
+                         </li>
+                         <li>
+                           <input id="select_8" type="radio" name="select" />
+                           <label for="select_8">9</label>
+                         </li>
+                         <li>
+                           <input id="select_9" type="radio" name="select" />
+                           <label for="select_9">10</label>
+                         </li>
+                         <li>
+                           <input id="select_10" type="radio" name="select" />
+                           <label for="select_10">11</label>
+                         </li>
+                         <li>
+                           <input id="select_11" type="radio" name="select" />
+                           <label for="select_11">12</label>
+                         </li>
+                         <li>
+                           <input id="select_12" type="radio" name="select" />
+                           <label for="select_12">13</label>
+                         </li>
+                         <li>
+                           <input id="select_13" type="radio" name="select" />
+                           <label for="select_13">14</label>
+                         </li>
+                         <li>
+                           <input id="select_14" type="radio" name="select" />
+                           <label for="select_14">15</label>
+                         </li>
+                         <li>
+                           <input id="select_15" type="radio" name="select" />
+                           <label for="select_15">16</label>
+                         </li>
+                         <li>
+                           <input id="select_16" type="radio" name="select" />
+                           <label for="select_16">17</label>
+                         </li>
+                       </ul>
+                     </div>
+                 </div>
+        label.js__label(for="phone")
+            |Ваш телефон
+            input.phone__tell(type="text" placeholder="не выбрано")#phone
+            +icon('phone', 'phone') 
+        button.booking__btn.button(type="submit") 
+            +icon('search', 'search')
             | Найти номер

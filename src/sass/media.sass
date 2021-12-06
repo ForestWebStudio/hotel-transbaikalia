@@ -228,6 +228,17 @@
             img
                 transform: translateY(0)
 
+@media (max-width:1300px) 
+   .booking
+        bottom: -255px
+        &__btn 
+            width: 100%
+        form
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+   .hero
+      margin-bottom: 281px
+
 // standart
 @media (max-width: 1200px)
     .room__flex
@@ -287,19 +298,7 @@
                 font-size: 12px
             a
                 font-size: 14px
-    .booking
-        width: 98%
-        button
-            width: 100%
-        form
-            display: grid
-            grid-template-columns: repeat(1, 1fr)
-            grid-gap: 20px
-        &__input
-            width: 100%
-            padding-right: 0
-        &__date
-            margin-right: 0
+   
 
     .hero__items
         transform: translateY(7%)
@@ -343,10 +342,6 @@
         .news
             margin-bottom: 100px
 
-    .booking
-        bottom: 10px
-    .hero
-        margin-bottom: 100px
 
 @media (max-width:1024px)
     .company
@@ -696,10 +691,15 @@
                 font-size: 12px
                 line-height: 20px
 
-    .hero
-        margin-bottom: 150px
+
 
 @media (max-width: 570px)
+    .hero 
+       margin-bottom: 163px
+
+    .booking 
+       bottom: -88px
+
     .popup___close 
         position: absolute
         width: 20px
@@ -762,7 +762,6 @@
 
     .hero
         height: 700px
-        margin-bottom: 130px
         &__items
             transform: translateY(0)
         &__item

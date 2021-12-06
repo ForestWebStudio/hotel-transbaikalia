@@ -1,40 +1,48 @@
- // Селекты класический
-  function select() {
-    var time = 300,
-        trigger = null;
-    $('.select__trigger').on('click', function () {
-      var drop = $(this).siblings('.select__drop');
-      trigger = $(this);
-      trigger.toggleClass('active');
-      drop.fadeToggle(time);
+/*Маска для инпута*/
+$(function(){
+  $(".phone__tell").mask("8(999) 999-9999");
+});
 
 
-      $(document).mouseup(function (e) {
-        if (!trigger.is(e.target)
-          && trigger.has(e.target).length === 0
-          && !drop.is(e.target)
-          && drop.has(e.target).length === 0) {
-          trigger.removeClass('active');
-          drop.fadeOut(time);
-        }
-      });
 
 
-      $('body').on('change', '.select__drop input', function () {
-        console.log(trigger);
-        if ($(this).is(':checked')) {
-          trigger.find('span').text($(this).siblings('label').text());
-          trigger.find('span').css('color', '#087868')
-        }
+// Селекты класический
+function select() {
+  var time = 300,
+    trigger = null;
+  $('.select__trigger').on('click', function (e) {
+    var drop = $(this).siblings('.select__drop');
+    trigger = $(this);
+    trigger.toggleClass('active');
+    drop.fadeToggle(time);
+
+
+    $(document).mouseup(function (e) {
+      if (!trigger.is(e.target)
+        && trigger.has(e.target).length === 0
+        && !drop.is(e.target)
+        && drop.has(e.target).length === 0) {
         trigger.removeClass('active');
         drop.fadeOut(time);
-      });
+      }
+    });
+
+
+    $('body').on('change', '.select__drop input', function () {
+      console.log(trigger);
+      if ($(this).is(':checked')) {
+        trigger.find('span').text($(this).siblings('label').text());
+        trigger.find('span').css('color', '#087868')
+      }
+      trigger.removeClass('active');
+      drop.fadeOut(time);
+    });
 
 
 
-    })
-  }
-  select();
+  })
+}
+select();
 
 
 //scroll
@@ -44,7 +52,7 @@
       theme: "dark",
     });
   });
-})(jQuery); 
+})(jQuery);
 
 
 
@@ -52,208 +60,227 @@
 //select choice of people
 function selectchoice() {
   let time = 2
-  let timeChildren = 0
-  const js__popupuserNone = document.querySelector('.js__popup-userNone');
-  const js__popupuserblock = document.querySelector('.js__popup-userblock');
-  const js__popupColor = document.querySelector('.js__popup-color');
+  
+
 
   function openClose() {
-    const js__click = document.querySelector('.js__click');
-    const js__popuppeople = document.querySelector('.js__popup-people');
+    document.querySelectorAll('.js__click').forEach(function (js__click) {
+      const js__popuppeople = js__click.querySelector('.js__popup-people');
 
 
 
-    js__click.addEventListener('click', () => {
-      js__popuppeople.classList.toggle('open')
-      js__click.classList.toggle('open');
-    })
+      js__click.addEventListener('click', (e) => {
+        e.stopPropagation()
+        js__popuppeople.classList.toggle('open')
+        js__click.classList.toggle('open');
+      })
 
-    js__popuppeople.addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
+      js__popuppeople.addEventListener('click', (e) => {
+        e.stopPropagation();
+      })
 
-    document.addEventListener('click', (e) => {
-      js__popuppeople.classList.remove('open')
-      js__click.classList.remove('open');
-    })
+      document.addEventListener('click', (e) => {
+        js__popuppeople.classList.remove('open')
+        js__click.classList.remove('open');
+      })
+
+    });
   }
 
   function adults() {
-    const js__popupPlus = document.querySelector(".js__popup-plus");
-    const js__popupAppend = document.querySelector(".js__popup-append");
-    const js__popupMinus = document.querySelector(".js__popup-minus");
-    const js__popupNumber = document.querySelector(".js__popup-number");
-    const js__popupInputDate = document.querySelector(".js__popupInputDate");
+    document.querySelectorAll('.js__click').forEach(function (js__click) {
+      const js__popupPlus = js__click.querySelector(".js__popup-plus");
+      const js__popupAppend = js__click.querySelector(".js__popup-append");
+      const js__popupMinus = js__click.querySelector(".js__popup-minus");
+      const js__popupNumber = js__click.querySelector(".js__popup-number");
+      const js__popupInputDate = js__click.querySelector(".js__popupInputDate");
+      const js__popupuserNone = js__click.querySelector('.js__popup-userNone');
+      const js__popupuserblock = js__click.querySelector('.js__popup-userblock');
+      const js__popupColor = js__click.querySelector('.js__popup-color');
 
 
 
 
 
-    for (let i = 0; i < 2; i++) {
-      const img = document.createElement('img');
-      img.src = 'img/popup__people-green.svg'
-      img.classList.add('js__popup-imgGreen')
-      js__popupAppend.append(img);
-    }
+      for (let i = 0; i < 2; i++) {
+        const img = document.createElement('img');
+        img.src = 'img/popup__people-green.svg'
+        img.classList.add('js__popup-imgGreen')
+        js__popupAppend.append(img);
+      }
 
-    for (let i = 3; i < 5; i++) {
-      const img = document.createElement('img');
-      img.src = 'img/popup__people.svg'
-      img.classList.add('js__popup-img')
-      js__popupAppend.append(img);
-    }
-
-    function minusPeople() {
-      const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
-
-      if (js__popupImgGreen.length > 1) {
-        js__popupAppend.removeChild(js__popupImgGreen[1]);
+      for (let i = 3; i < 5; i++) {
         const img = document.createElement('img');
         img.src = 'img/popup__people.svg'
         img.classList.add('js__popup-img')
         js__popupAppend.append(img);
-
-        numberMinus()
       }
-    }
 
-    function numberMinus() {
-      time--
-      if (time > 1) {
-        js__popupInputDate.innerHTML = `${time} взрослых`
-        js__popupNumber.innerHTML = ` Взрослые: ${time}`
-      } else {
-        js__popupInputDate.innerHTML = `${time} взрослый`
-        js__popupNumber.innerHTML = ` Взрослый: ${time}`
+      function minusPeople() {
+        const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
+
+        if (js__popupImgGreen.length > 1) {
+          js__popupAppend.removeChild(js__popupImgGreen[1]);
+          const img = document.createElement('img');
+          img.src = 'img/popup__people.svg'
+          img.classList.add('js__popup-img')
+          js__popupAppend.append(img);
+
+          numberMinus()
+        }
       }
-    }
 
-    function plusPeople() {
-      const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
-      const js__popupImg = js__popupAppend.querySelector(".js__popup-img");
-      if (js__popupImgGreen.length < 4) {
-        const img = document.createElement('img');
-        img.src = 'img/popup__people-green.svg'
-        img.classList.add('js__popup-imgGreen')
-        js__popupAppend.prepend(img);
-        js__popupAppend.removeChild(js__popupImg);
-
-        numberPlus();
+      function numberMinus() {
+        time--
+        if (time > 1) {
+          js__popupInputDate.innerHTML = `${time} взрослых`
+          js__popupNumber.innerHTML = ` Взрослые: ${time}`
+        } else {
+          js__popupInputDate.innerHTML = `${time} взрослый`
+          js__popupNumber.innerHTML = ` Взрослый: ${time}`
+        }
       }
-    }
 
-    function numberPlus() {
-      time++
-      if (time > 1) {
-        js__popupInputDate.innerHTML = `${time} взрослых`
-        js__popupNumber.innerHTML = ` Взрослые: ${time}`
-      } else {
-        js__popupInputDate.innerHTML = `${time} взрослый`
-        js__popupNumber.innerHTML = ` Взрослый: ${time}`
+      function plusPeople() {
+        const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
+        const js__popupImg = js__popupAppend.querySelector(".js__popup-img");
+        if (js__popupImgGreen.length < 4) {
+          const img = document.createElement('img');
+          img.src = 'img/popup__people-green.svg'
+          img.classList.add('js__popup-imgGreen')
+          js__popupAppend.prepend(img);
+          js__popupAppend.removeChild(js__popupImg);
+
+          numberPlus();
+        }
       }
-    }
+
+      function numberPlus() {
+        time++
+        if (time > 1) {
+          js__popupInputDate.innerHTML = `${time} взрослых`
+          js__popupNumber.innerHTML = ` Взрослые: ${time}`
+        } else {
+          js__popupInputDate.innerHTML = `${time} взрослый`
+          js__popupNumber.innerHTML = ` Взрослый: ${time}`
+        }
+      }
 
 
-    js__popupMinus.addEventListener("click", function () {
-      minusPeople();
-    });
+      js__popupMinus.addEventListener("click", function (e) {
+        e.preventDefault()
+        minusPeople();
+      });
 
-    js__popupPlus.addEventListener("click", function () {
-      plusPeople();
-      js__popupuserNone.style.display = 'block'
-      js__popupuserblock.style.display = 'none'
-      js__popupColor.style.color = '#087868'
+      js__popupPlus.addEventListener("click", function (e) {
+        e.preventDefault()
+        plusPeople();
+        js__popupuserNone.style.display = 'block'
+        js__popupuserblock.style.display = 'none'
+        js__popupColor.style.color = '#087868'
+      });
     });
   }
 
   function children() {
-    const js__popupPlus = document.querySelector(".js__popup-plusChildren");
-    const js__popupAppend = document.querySelector(".js__popup-appendChildren");
-    const js__popupMinus = document.querySelector(".js__popup-minusChildren");
-    const js__popup__children = document.querySelector(".js__popup__children");
-    const js__popupNumber = document.querySelector(".js__popup-numberChildren");
+    document.querySelectorAll('.js__click').forEach(function (js__click) {
+      let timeChildren = 0
+      const js__popupPlus = js__click.querySelector(".js__popup-plusChildren");
+      const js__popupAppend = js__click.querySelector(".js__popup-appendChildren");
+      const js__popupMinus = js__click.querySelector(".js__popup-minusChildren");
+      const js__popup__children = js__click.querySelector(".js__popup__children");
+      const js__popupNumber = js__click.querySelector(".js__popup-numberChildren");
+      const js__popupuserNone = js__click.querySelector('.js__popup-userNone');
+      const js__popupuserblock = js__click.querySelector('.js__popup-userblock');
+      const js__popupColor = js__click.querySelector('.js__popup-color');
 
 
 
 
-
-    for (let i = 0; i < 4; i++) {
-      const img = document.createElement('img');
-      img.src = 'img/popup__people.svg'
-      img.classList.add('js__popup-img')
-      js__popupAppend.append(img);
-    }
-
-    function numberPlus() {
-      timeChildren++
-
-      if (timeChildren > 1) {
-        js__popup__children.innerHTML = `- ${timeChildren} дети`
-        js__popupNumber.innerHTML = `Дети: ${timeChildren}`
-      } else {
-        js__popup__children.innerHTML = `- ${timeChildren} ребенок`
-        js__popupNumber.innerHTML = `Ребенок: ${timeChildren}`
-      }
-    }
-
-    function numberMinus() {
-      timeChildren--
-
-      if (timeChildren > 1) {
-        js__popup__children.innerHTML = `- ${timeChildren} дети`
-        js__popupNumber.innerHTML = `Дети: ${timeChildren}`
-      } else {
-        js__popup__children.innerHTML = `- ${timeChildren} ребенок`
-        js__popupNumber.innerHTML = `Ребенок: ${timeChildren}`
-      }
-    }
-
-    function minusPeople() {
-      const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
-      const js__popupselect = document.querySelector(".select");
-      if (js__popupImgGreen.length > 0) {
-        js__popupAppend.removeChild(js__popupImgGreen[0]);
+      for (let i = 0; i < 4; i++) {
         const img = document.createElement('img');
         img.src = 'img/popup__people.svg'
         img.classList.add('js__popup-img')
         js__popupAppend.append(img);
-
-        numberMinus()
-
-        document.querySelector('.js__popup-opendselect').removeChild(js__popupselect);
-        js__popupselect.classList = 'js__popup-select'
-        document.querySelector('.js__popup-selectremove').appendChild(js__popupselect);
-        console.log(document.querySelector('.js__popup-selectremove'));
       }
-    }
 
+      function numberPlus() {
+        timeChildren++
 
-    function plusPeople() {
-      const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
-      const js__popupImg = js__popupAppend.querySelector(".js__popup-img");
-      const js__popupselect = document.querySelector(".js__popup-select");
-      if (js__popupImgGreen.length < 4) {
-        const img = document.createElement('img');
-        img.src = 'img/popup__people-green.svg'
-        img.classList.add('js__popup-imgGreen')
-        js__popupAppend.prepend(img);
-        js__popupAppend.removeChild(js__popupImg);
+        if (timeChildren > 1) {
+          js__popup__children.innerHTML = `- ${timeChildren} дети`
+          js__popupNumber.innerHTML = `Дети: ${timeChildren}`
+        } else {
+          js__popup__children.innerHTML = `- ${timeChildren} ребенок`
+          js__popupNumber.innerHTML = `Ребенок: ${timeChildren}`
+        }
 
-        numberPlus();
-        document.querySelector('.js__popup-opendselect').appendChild(js__popupselect);
-        js__popupselect.classList = 'select'
+        return timeChildren
       }
-    }
 
-    js__popupMinus.addEventListener("click", function () {
-      minusPeople();
-    });
+      function numberMinus() {
+        timeChildren--
 
-    js__popupPlus.addEventListener("click", function () {
-      plusPeople();
-      js__popupuserNone.style.display = 'block'
-      js__popupuserblock.style.display = 'none'
-      js__popupColor.style.color = '#087868'
+        if (timeChildren > 1) {
+          js__popup__children.innerHTML = `- ${timeChildren} дети`
+          js__popupNumber.innerHTML = `Дети: ${timeChildren}`
+        } else {
+          js__popup__children.innerHTML = `- ${timeChildren} ребенок`
+          js__popupNumber.innerHTML = `Ребенок: ${timeChildren}`
+        }
+
+        return timeChildren
+      }
+
+      function minusPeople() {
+        const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
+        const js__popupselect = js__click.querySelector(".select");
+        if (js__popupImgGreen.length > 0) {
+          js__popupAppend.removeChild(js__popupImgGreen[0]);
+          const img = document.createElement('img');
+          img.src = 'img/popup__people.svg'
+          img.classList.add('js__popup-img')
+          js__popupAppend.append(img);
+
+          numberMinus()
+
+          js__click.querySelector('.js__popup-opendselect').removeChild(js__popupselect);
+          js__popupselect.classList = 'js__popup-select'
+          js__click.querySelector('.js__popup-selectremove').appendChild(js__popupselect);
+        }
+      }
+
+
+      function plusPeople() {
+        const js__popupImgGreen = js__popupAppend.querySelectorAll(".js__popup-imgGreen");
+        const js__popupImg = js__popupAppend.querySelector(".js__popup-img");
+        const js__popupselect = js__click.querySelector(".js__popup-select");
+        if (js__popupImgGreen.length < 4) {
+          const img = document.createElement('img');
+          img.src = 'img/popup__people-green.svg'
+          img.classList.add('js__popup-imgGreen')
+          js__popupAppend.prepend(img);
+          js__popupAppend.removeChild(js__popupImg);
+
+          numberPlus();
+          js__click.querySelector('.js__popup-opendselect').appendChild(js__popupselect);
+          js__popupselect.classList = 'select'
+        }
+      }
+
+      js__popupMinus.addEventListener("click", function (e) {
+        e.preventDefault()
+        minusPeople();
+      });
+
+      js__popupPlus.addEventListener("click", function (e) {
+        e.preventDefault()
+        plusPeople();
+        js__popupuserNone.style.display = 'block'
+        js__popupuserblock.style.display = 'none'
+        js__popupColor.style.color = '#087868'
+      });
+
     });
   }
 
@@ -264,6 +291,8 @@ function selectchoice() {
   }
 
   init1()
+
+
 
 }
 
@@ -452,9 +481,9 @@ const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px'; //Полу
 
 
 for (let i = 0; i < js__popupClick.length; i++) {
-    js__popupClick[i].addEventListener('click', (e) => {
-        e.stopPropagation();
-        const popup__name = js__popupClick[i].dataset.modal;
+  js__popupClick[i].addEventListener('click', (e) => {
+    e.stopPropagation();
+    const popup__name = js__popupClick[i].dataset.modal;
 
 
     const popupCurent = document.querySelector(`[data-popup="${popup__name}"]`);
@@ -462,26 +491,26 @@ for (let i = 0; i < js__popupClick.length; i++) {
     const popupContent = popupCurent.querySelector('.js__popup-content');
     const popup__close = popupCurent.querySelector('.popup__close');
 
-    
-        add(popupCurent, body);
 
-        function popupRemove() {
-            remove(popupCurent);
+    add(popupCurent, body);
 
-            setTimeout(() => {
-                remove(body);
-                body.style.paddingRight = '0px';
-            }, 400);
-        }
+    function popupRemove() {
+      remove(popupCurent);
+
+      setTimeout(() => {
+        remove(body);
+        body.style.paddingRight = '0px';
+      }, 400);
+    }
 
 
-        document.addEventListener('click', (e) => {
-            popupRemove();
-        });
+    document.addEventListener('click', (e) => {
+      popupRemove();
+    });
 
-        popup__close.addEventListener('click', () => {
-            popupRemove();
-        });
+    popup__close.addEventListener('click', () => {
+      popupRemove();
+    });
 
 
 
@@ -489,32 +518,26 @@ for (let i = 0; i < js__popupClick.length; i++) {
       popupContent.addEventListener('click', (e) => {
         e.stopPropagation();
       })
-
-      for (let i = 0; i < calendar.length; i++) {
-        calendar[i].addEventListener('click', (e) => {
-          e.stopPropagation();
-        })
-      }
     }
 
-      
-        body.style.paddingRight = lockPaddingValue;
 
-    })
+    body.style.paddingRight = lockPaddingValue;
+
+  })
 };
 
 
 
 function add(...js__popupAdd) {
-    for (let i = 0; i < js__popupAdd.length; i++) {
-        js__popupAdd[i].classList.add('open');
-    }
+  for (let i = 0; i < js__popupAdd.length; i++) {
+    js__popupAdd[i].classList.add('open');
+  }
 }
 
 function remove(...js__popupRemove) {
-    for (let i = 0; i < js__popupRemove.length; i++) {
-        js__popupRemove[i].classList.remove('open');
-    }
+  for (let i = 0; i < js__popupRemove.length; i++) {
+    js__popupRemove[i].classList.remove('open');
+  }
 }
 
 
@@ -528,18 +551,31 @@ $(function () {
     const input = js__label.querySelector('.calendar');
     const popup__calendar = js__label.querySelector('.popup__calendar');
     const js__calendarcheck = js__label.querySelector('.js__calendar-check');
+    const datepicker = document.querySelectorAll('.datepicker');
+
+  
+
+    for (let i = 0; i < datepicker.length; i++) {
+      if (datepicker[i]) {
+        datepicker[i].addEventListener('click', (e) => {
+          e.stopPropagation()
+        })
+      }
+    }
 
 
-    js__label.addEventListener('click', () => {
+
+    js__label.addEventListener('click', (e) => {
+      e.stopPropagation()
       js__label.classList.add('open')
     })
 
     document.addEventListener('click', function (e) {
-      if (!js__label.contains(e.target)) {
-        js__label.classList.remove('open')
-        if (input) {
-          input.classList.remove('active');
-        }
+      js__label.classList.remove('open')
+      if (input) {
+        input.classList.remove('active');
+      } 
+      if(popup__calendar) {
         popup__calendar.style.display = 'block';
         js__calendarcheck.style.display = 'none';
       }
@@ -583,6 +619,7 @@ $(function () {
         inst.hide();
         if (inst._prevOnSelectValue) {
           input.classList.add('active');
+          console.log(input);
           popup__calendar.style.display = 'none';
           js__calendarcheck.style.display = 'block';
         }
@@ -649,12 +686,12 @@ new AirDatepicker('#booking-to')
 // niceselect
 
 $(document).ready(function () {
-    $('select').niceSelect();
+  $('select').niceSelect();
 });
 
-const quests = document.querySelector('.booking__quests input')
+/* const quests = document.querySelector('.booking__quests input')
 const questsModal = document.querySelector('.quests')
 
 quests.addEventListener('click', () => {
     questsModal.classList.toggle('active')
-})
+}) */
